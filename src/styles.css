@@ -318,6 +318,51 @@ button {
   margin-top: 4px;
 }
 
+/* Tap-to-place: mobilde göster, masaüstünde gizle */
+.tap-picker { display: none; }
+
+@media (max-width: 768px) {
+  .tap-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .tap-btn {
+    background: var(--bg-3);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-family: inherit;
+    line-height: 1.2;
+    transition: background 0.12s, border-color 0.12s, transform 0.06s;
+    cursor: pointer;
+  }
+  .tap-btn:active {
+    background: var(--accent);
+    color: #0e1420;
+    border-color: var(--accent);
+    transform: scale(0.97);
+  }
+  .tap-btn-name {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .tap-btn-yy {
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+  .tap-btn:active .tap-btn-yy { color: rgba(14,20,32,0.7); }
+}
+
 /* ---------------- padisah boxes ---------------- */
 .boxes {
   display: grid;

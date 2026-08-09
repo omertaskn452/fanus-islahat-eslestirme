@@ -15,8 +15,10 @@ import { IslahatCard } from './components/IslahatCard.jsx'
 import { PadisahBox } from './components/PadisahBox.jsx'
 import { FanusDroppable } from './components/FanusDroppable.jsx'
 
-const COUNT_OPTIONS = [10, 25, 50, 'Tümü']
+const COUNT_OPTIONS = [10, 25, 50, 75, 100, 'Tümü']
 const MIN_TO_CHECK = 5
+const BALANCED_SAMPLING_THRESHOLD = 50
+const MIN_PER_PADISAH = 2
 
 function shuffle(arr) {
   const a = arr.slice()
@@ -45,6 +47,29 @@ export default function App() {
     const total = selectedCount === 'Tümü'
       ? filtered.length
       : Math.min(selectedCount, filtered.length)
+
+    // 50+ turda her padişahtan min N ıslahat garanti et
+    if (total >= BALANCED_SAMPLING_THRESHOLD && total < filtered.length) {
+      const byPadisah = new Map()
+      for (const item of filtered) {
+        if (!byPadisah.has(item.padisahId)) byPadisah.set(item.padisahId, [])
+        byPadisah.get(item.padisahId).push(item)
+      }
+      const guaranteed = []
+      const rest = []
+      for (const items of byPadisah.values()) {
+        const s = shuffle(items)
+        const take = Math.min(MIN_PER_PADISAH, s.length)
+        guaranteed.push(...s.slice(0, take))
+        rest.push(...s.slice(take))
+      }
+      if (guaranteed.length >= total) {
+        return shuffle(guaranteed).slice(0, total).map(i => i.id)
+      }
+      const filler = shuffle(rest).slice(0, total - guaranteed.length)
+      return shuffle([...guaranteed, ...filler]).map(i => i.id)
+    }
+
     return shuffle(filtered).slice(0, total).map(i => i.id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedYy, selectedCount, sessionKey])
@@ -172,6 +197,18 @@ export default function App() {
     const top = fanus[fanus.length - 1]
     const rest = fanus.slice(0, -1)
     setFanus([top, ...rest])
+  }
+
+  // Mobil için: üstteki karti tap ile bir padişah kutusuna yerleştir
+  function placeCurrentInto(padisahId) {
+    if (checked) return
+    if (fanus.length === 0) return
+    const top = fanus[fanus.length - 1]
+    setFanus(fanus.slice(0, -1))
+    setPlacements(prev => ({
+      ...prev,
+      [padisahId]: [...(prev[padisahId] || []), top],
+    }))
   }
 
   const placedCount = useMemo(
@@ -340,9 +377,23 @@ export default function App() {
                 )}
               </FanusDroppable>
               {currentCard && (
-                <div className="skip-row">
-                  <button className="btn" onClick={handleSkip}>Boş bırak (sona at)</button>
-                </div>
+                <>
+                  <div className="tap-picker" aria-label="Padişah seç (mobil)">
+                    {activePadisahlar.map(p => (
+                      <button
+                        key={p.id}
+                        className="tap-btn"
+                        onClick={() => placeCurrentInto(p.id)}
+                      >
+                        <span className="tap-btn-name">{p.ad}</span>
+                        <span className="tap-btn-yy">{p.yy}. yy</span>
+                      </button>
+                    ))}
+                  </div>
+                  <div className="skip-row">
+                    <button className="btn" onClick={handleSkip}>Boş bırak (sona at)</button>
+                  </div>
+                </>
               )}
             </>
           )}

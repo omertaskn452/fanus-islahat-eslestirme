@@ -1,0 +1,38 @@
+{
+  "padisahlar": [
+    { "id": "2mahmut",   "ad": "II. Mahmut",       "yy": 19 },
+    { "id": "abdulmecit","ad": "Abdulmecit",       "yy": 19 },
+    { "id": "abdulaziz", "ad": "Abdulaziz",        "yy": 19 },
+    { "id": "2abdulhamit","ad": "II. Abdulhamit",  "yy": 19 },
+    { "id": "3selim",    "ad": "III. Selim",       "yy": 18 },
+    { "id": "1mahmut",   "ad": "I. Mahmut",        "yy": 18 },
+    { "id": "3mustafa",  "ad": "III. Mustafa",     "yy": 18 },
+    { "id": "3ahmet",    "ad": "III. Ahmet",       "yy": 18 }
+  ],
+  "islahatlar": [
+    { "id": 1,  "ad": "Sekban-i Cedid Ocagi kuruldu",              "padisahId": "2mahmut",     "yy": 19 },
+    { "id": 2,  "ad": "Yeniceri Ocagi kaldirildi (Vaka-i Hayriye)","padisahId": "2mahmut",     "yy": 19 },
+    { "id": 3,  "ad": "Asakir-i Mansure-i Muhammediye kuruldu",    "padisahId": "2mahmut",     "yy": 19 },
+    { "id": 4,  "ad": "Divan kaldirilip Nazirliklar (bakanliklar) kuruldu","padisahId": "2mahmut","yy": 19 },
+    { "id": 5,  "ad": "Ilk resmi gazete Takvim-i Vekayi cikarildi","padisahId": "2mahmut",     "yy": 19 },
+    { "id": 6,  "ad": "Ilk nufus sayimi yapildi",                  "padisahId": "2mahmut",     "yy": 19 },
+    { "id": 7,  "ad": "Posta teskilati kuruldu",                   "padisahId": "2mahmut",     "yy": 19 },
+    { "id": 8,  "ad": "Kilik-kiyafet duzenlemesi (fes)",           "padisahId": "2mahmut",     "yy": 19 },
+    { "id": 9,  "ad": "Musadere usulu kaldirildi",                 "padisahId": "2mahmut",     "yy": 19 },
+    { "id": 10, "ad": "Tanzimat Fermani ilan edildi",              "padisahId": "abdulmecit",  "yy": 19 },
+    { "id": 11, "ad": "Islahat Fermani ilan edildi",               "padisahId": "abdulmecit",  "yy": 19 },
+    { "id": 12, "ad": "Mecelle hazirlanmaya baslandi",             "padisahId": "abdulaziz",   "yy": 19 },
+    { "id": 13, "ad": "Ilk Osmanli Anayasasi Kanun-i Esasi ilan edildi","padisahId": "2abdulhamit","yy": 19 },
+    { "id": 14, "ad": "I. Mesrutiyet ilan edildi",                 "padisahId": "2abdulhamit", "yy": 19 },
+    { "id": 15, "ad": "Nizam-i Cedid ordusu kuruldu",              "padisahId": "3selim",      "yy": 18 },
+    { "id": 16, "ad": "Irad-i Cedid Hazinesi kuruldu",             "padisahId": "3selim",      "yy": 18 },
+    { "id": 17, "ad": "Avrupa baskentlerinde daimi elcilikler acildi","padisahId": "3selim",   "yy": 18 },
+    { "id": 18, "ad": "Muhendishane-i Berri Humayun acildi",       "padisahId": "3selim",      "yy": 18 },
+    { "id": 19, "ad": "Humbaraci Ocagi Avrupai tarzda duzenlendi", "padisahId": "1mahmut",     "yy": 18 },
+    { "id": 20, "ad": "Kara Muhendishanesi (Kara Muhendishane-i Humayun) acildi","padisahId": "3mustafa","yy": 18 },
+    { "id": 21, "ad": "Ilk matbaa (Ibrahim Muteferrika) acildi",   "padisahId": "3ahmet",      "yy": 18 },
+    { "id": 22, "ad": "Yalova'da kagit fabrikasi kuruldu",         "padisahId": "3ahmet",      "yy": 18 },
+    { "id": 23, "ad": "Lale Devri yasandi",                        "padisahId": "3ahmet",      "yy": 18 },
+    { "id": 24, "ad": "Cicek asisi uygulanmaya baslandi",          "padisahId": "3ahmet",      "yy": 18 }
+  ]
+}

@@ -358,6 +358,17 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+.box-stats {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+.box-stats .mini.ok  { color: var(--ok-text); }
+.box-stats .mini.err { color: var(--err-text); }
 
 .box-body {
   padding: 10px;
@@ -409,7 +420,8 @@ button {
 /* ---------------- result banner ---------------- */
 .result-banner {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  gap: 6px;
   align-items: center;
   justify-content: center;
   padding: 14px;
@@ -419,9 +431,18 @@ button {
   margin-bottom: 12px;
   font-size: 15px;
 }
+.result-scores {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
 .result-banner .score { font-weight: 700; }
 .result-banner .ok  { color: var(--ok-text); }
 .result-banner .err { color: var(--err-text); }
+.result-hint {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
 
 /* ---------------- drag overlay ---------------- */
 .overlay-card {

@@ -39,7 +39,7 @@ export function IslahatCard({
       </div>
       {revealedAnswer && (
         <div className="card-answer">
-          → Doğru: <b>{revealedAnswer}</b>
+          → Cevap: <b>{revealedAnswer}</b>
         </div>
       )}
     </div>

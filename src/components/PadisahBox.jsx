@@ -9,16 +9,25 @@ export function PadisahBox({
   revealed,
   onToggleReveal,
   correctPadisahNameFor,
+  stats,
 }) {
   const { setNodeRef, isOver } = useDroppable({
     id: `box-${padisah.id}`,
     data: { padisahId: padisah.id },
   })
 
+  const showStats = checked && stats && (stats.d > 0 || stats.y > 0)
+
   return (
     <div ref={setNodeRef} className={`box ${isOver ? 'over' : ''}`}>
       <div className="box-head">
         <span className="box-name">{padisah.ad}</span>
+        {showStats && (
+          <span className="box-stats">
+            <span className="mini ok">{stats.d}D</span>
+            <span className="mini err">{stats.y}Y</span>
+          </span>
+        )}
         <span className="box-yy">{padisah.yy}. yy</span>
       </div>
       <div className="box-body">

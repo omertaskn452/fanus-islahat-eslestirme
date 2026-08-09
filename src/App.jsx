@@ -6,7 +6,8 @@ import {
   TouchSensor,
   useSensor,
   useSensors,
-  closestCenter,
+  pointerWithin,
+  rectIntersection,
 } from '@dnd-kit/core'
 
 import data from './data/islahatlar.json'
@@ -213,6 +214,20 @@ export default function App() {
   const wrongCount = Object.values(results).filter(v => v === 'wrong').length
   const activeCard = activeDragId != null ? islahatById.get(activeDragId) : null
 
+  // Padişah başı D/Y sayısı
+  const perPadisahStats = useMemo(() => {
+    const stats = {}
+    for (const [pid, arr] of Object.entries(placements)) {
+      let d = 0, y = 0
+      for (const id of arr) {
+        if (results[id] === 'correct') d++
+        else if (results[id] === 'wrong') y++
+      }
+      stats[pid] = { d, y }
+    }
+    return stats
+  }, [placements, results])
+
   // -------- BAŞLANGIÇ EKRANI --------
   if (selectedYy == null) {
     return (
@@ -285,7 +300,10 @@ export default function App() {
 
       <DndContext
         sensors={sensors}
-        collisionDetection={closestCenter}
+        collisionDetection={(args) => {
+          const pointer = pointerWithin(args)
+          return pointer.length > 0 ? pointer : rectIntersection(args)
+        }}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
       >
@@ -302,8 +320,13 @@ export default function App() {
 
           {checked ? (
             <div className="result-banner">
-              <span className="score ok">✓ {correctCount} doğru</span>
-              <span className="score err">! {wrongCount} yanlış</span>
+              <div className="result-scores">
+                <span className="score ok">✓ {correctCount} doğru</span>
+                <span className="score err">! {wrongCount} yanlış</span>
+              </div>
+              <div className="result-hint">
+                Doğru cevabı görmek için yanlış (kırmızı) kartlara tıklayın.
+              </div>
             </div>
           ) : (
             <>
@@ -339,6 +362,7 @@ export default function App() {
                   revealed={revealed}
                   onToggleReveal={toggleReveal}
                   correctPadisahNameFor={correctPadisahNameFor}
+                  stats={perPadisahStats[p.id]}
                 />
               ))}
             </div>

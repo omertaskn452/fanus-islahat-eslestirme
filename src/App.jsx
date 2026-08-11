@@ -81,7 +81,9 @@ export default function App() {
 
   const activePadisahlar = useMemo(() => {
     const ids = new Set(activeIslahatlar.map(i => i.padisahId))
-    return data.padisahlar.filter(p => ids.has(p.id))
+    return data.padisahlar
+      .filter(p => ids.has(p.id))
+      .sort((a, b) => a.yy - b.yy)
   }, [activeIslahatlar])
 
   const groupsByYy = useMemo(() => {
@@ -378,16 +380,20 @@ export default function App() {
               </FanusDroppable>
               {currentCard && (
                 <>
-                  <div className="tap-picker" aria-label="Padişah seç (mobil)">
-                    {activePadisahlar.map(p => (
-                      <button
-                        key={p.id}
-                        className="tap-btn"
-                        onClick={() => placeCurrentInto(p.id)}
-                      >
-                        <span className="tap-btn-name">{p.ad}</span>
-                        <span className="tap-btn-yy">{p.yy}. yy</span>
-                      </button>
+                  <div className="tap-picker" aria-label="Padişah seç">
+                    {groupsByYy.map(([yy, list]) => (
+                      <div key={yy} className="tap-row">
+                        {list.map(p => (
+                          <button
+                            key={p.id}
+                            className="tap-btn"
+                            onClick={() => placeCurrentInto(p.id)}
+                          >
+                            <span className="tap-btn-name">{p.ad}</span>
+                            <span className="tap-btn-yy">{p.yy}. yy</span>
+                          </button>
+                        ))}
+                      </div>
                     ))}
                   </div>
                   <div className="skip-row">

@@ -272,7 +272,7 @@ export default function FanusApp({ onBack }) {
             Hangi yüzyılın ıslahatları üzerinde çalışmak istersin?
           </p>
 
-          <div className="start-choices">
+          <div className="start-choices choices-compact">
             {availableYys.map(yy => {
               const count = data.islahatlar.filter(i => i.yy === yy).length
               return (

@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import data from './data/kultur.json'
 import { generateQuestions } from './utils/questionGenerator.js'
 
-const COUNT_OPTIONS = [10, 20, 30, 50, 'Tümü']
+const COUNT_OPTIONS = [15, 35, 75, 125, 'Tümü']
 
 
 const UNITE_LIST = [
@@ -47,7 +47,7 @@ function countCandidatesFor(gruplar, unite, kategori) {
 export default function KulturApp({ onBack }) {
   const [unite, setUnite] = useState(null)
   const [kategori, setKategori] = useState(null)
-  const [count, setCount] = useState(10)
+  const [count, setCount] = useState(15)
   const [sessionKey, setSessionKey] = useState(0)
 
   const questions = useMemo(() => {

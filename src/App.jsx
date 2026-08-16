@@ -33,6 +33,8 @@ export default function App() {
             </span>
           </button>
         </div>
+
+        <div className="back-slot" />
       </div>
     </div>
   )

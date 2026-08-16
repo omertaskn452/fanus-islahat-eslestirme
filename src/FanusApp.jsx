@@ -298,9 +298,11 @@ export default function FanusApp({ onBack }) {
             </button>
           </div>
 
-          {onBack && (
-            <button className="btn ghost back-below" onClick={onBack}>← Ana menü</button>
-          )}
+          <div className="back-slot">
+            {onBack && (
+              <button className="btn ghost" onClick={onBack}>← Ana menü</button>
+            )}
+          </div>
         </div>
       </div>
     )

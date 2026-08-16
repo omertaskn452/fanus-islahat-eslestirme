@@ -143,9 +143,11 @@ export default function KulturApp({ onBack }) {
             </button>
           </div>
 
-          {onBack && (
-            <button className="btn ghost back-below" onClick={onBack}>← Ana menü</button>
-          )}
+          <div className="back-slot">
+            {onBack && (
+              <button className="btn ghost" onClick={onBack}>← Ana menü</button>
+            )}
+          </div>
         </div>
       </div>
     )
@@ -180,9 +182,9 @@ export default function KulturApp({ onBack }) {
             })}
           </div>
 
-          <div className="back-below-row">
-            <button className="btn ghost back-below" onClick={backToUniteSecim}>← Ünite değiştir</button>
-            {onBack && <button className="btn ghost back-below" onClick={onBack}>Ana menü</button>}
+          <div className="back-slot">
+            <button className="btn ghost" onClick={backToUniteSecim}>← Ünite değiştir</button>
+            {onBack && <button className="btn ghost" onClick={onBack}>Ana menü</button>}
           </div>
         </div>
       </div>

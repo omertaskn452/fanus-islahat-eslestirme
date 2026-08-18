@@ -203,8 +203,20 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
   const cands = collectCandidates(selectedGruplar)
   const shuffled = shuffle(cands)
 
-  const total = count === 'Tümü' ? shuffled.length : Math.min(count, shuffled.length)
-  const picked = shuffled.slice(0, total)
+  // Aynı varlık (terim/kişi) hakkında birden fazla soru sorulmasın:
+  // farklı yönlerden (ör. "tanım -> kavram" ve "kavram -> tanım") aynı bilgiyi
+  // ölçen sorular tekrar yaratıyor. Her varlıktan yalnızca bir aday tut.
+  const uniqueByVarlik = []
+  const seenVarlik = new Set()
+  for (const c of shuffled) {
+    const key = `${c.grup.id}::${c.varlik.ad}`
+    if (seenVarlik.has(key)) continue
+    seenVarlik.add(key)
+    uniqueByVarlik.push(c)
+  }
+
+  const total = count === 'Tümü' ? uniqueByVarlik.length : Math.min(count, uniqueByVarlik.length)
+  const picked = uniqueByVarlik.slice(0, total)
 
   const questions = []
   for (let i = 0; i < picked.length; i++) {

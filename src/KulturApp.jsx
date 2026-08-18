@@ -30,15 +30,12 @@ function countCandidatesFor(gruplar, unite, kategori) {
   let filt = gruplar
   if (unite !== 'karma') filt = filt.filter(g => g.unite === unite)
   if (kategori !== 'karma') filt = filt.filter(g => g.kategori === kategori)
+  // Aynı varlıktan yalnızca bir soru üretildiği için,
+  // olası soru sayısı = en az bir özelliği olan benzersiz varlık sayısı.
   let cnt = 0
   for (const g of filt) {
     for (const v of g.varliklar) {
-      for (const o of v.ozellikler) {
-        cnt++
-        if (g.tip === 'terim' && v.ozellikler.filter(x => x.tip === o.tip).length === 1) {
-          cnt++
-        }
-      }
+      if (v.ozellikler && v.ozellikler.length > 0) cnt++
     }
   }
   return cnt

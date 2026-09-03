@@ -1,23 +1,15 @@
 import { useMemo, useState } from 'react'
 import veri from './data/madenler.json'
 import TurkiyeHaritasi from './components/TurkiyeHaritasi.jsx'
-import { madenSorulariUret, olasiSoruSayisi, madenIsaretleri, sahaEtiketi } from './utils/cografyaSorular.js'
+import {
+  DESTELER,
+  madenSorulariUret,
+  olasiSoruSayisi,
+  madenIsaretleri,
+  sahaEtiketi,
+} from './utils/cografyaSorular.js'
 
 const COUNT_OPTIONS = [15, 35, 75, 'Tümü']
-
-const DESTELER = [
-  {
-    id: 'haritali',
-    ad: 'Haritalı Sorular',
-    aciklama: 'Dilsiz harita üzerinde işaretli alanlar ve numaralandırılmış yerler',
-  },
-  {
-    id: 'haritasiz',
-    ad: 'Haritasız Sorular',
-    aciklama: 'Özelliklerinden madeni bulma, çıkarıldığı saha ve işleme tesisi soruları',
-  },
-  { id: 'karma', ad: 'Karışık', aciklama: 'Haritalı ve haritasız sorular birlikte' },
-]
 
 export default function CografyaApp({ onBack }) {
   const [ekran, setEkran] = useState('secim') // secim | kesif | test

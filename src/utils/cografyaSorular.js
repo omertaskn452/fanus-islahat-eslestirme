@@ -391,9 +391,36 @@ const URETICILER = [
   },
 ]
 
-/** Deste: 'haritali' | 'haritasiz' | 'karma' */
-const ureticileriSuz = (deste) =>
-  deste === 'karma' || !deste ? URETICILER : URETICILER.filter((u) => u.haritali === (deste === 'haritali'))
+/**
+ * Desteler. Her deste hangi soru tiplerinin sorulacağını belirler; `tipler`
+ * verilmemişse bütün tipler kullanılır. Ekrandaki kartlar da bu listeden gelir.
+ */
+export const DESTELER = [
+  {
+    id: 'haritadan-maden',
+    ad: 'Haritadan Maden Bul',
+    aciklama: 'Tek tip soru: haritada çıkarıldığı yerler işaretli, "hangi maden?" diye sorulur',
+    tipler: ['harita-maden'],
+  },
+  {
+    id: 'haritali',
+    ad: 'Haritalı Sorular',
+    aciklama: 'İşaretli alanlar, numaralandırılmış yerler ve haritada gösterilmeyen maden',
+    tipler: ['harita-maden', 'numarali', 'eksik-maden'],
+  },
+  {
+    id: 'haritasiz',
+    ad: 'Haritasız Sorular',
+    aciklama: 'Özelliklerinden madeni bulma, çıkarıldığı saha ve işleme tesisi soruları',
+    tipler: ['bilgi-maden', 'maden-saha', 'tesis-il', 'tesis-neden'],
+  },
+  { id: 'karma', ad: 'Karışık', aciklama: 'Bütün soru tipleri birlikte' },
+]
+
+const ureticileriSuz = (desteId) => {
+  const tipler = DESTELER.find((d) => d.id === desteId)?.tipler
+  return tipler ? URETICILER.filter((u) => tipler.includes(u.tip)) : URETICILER
+}
 
 /**
  * Test için soru üretir.

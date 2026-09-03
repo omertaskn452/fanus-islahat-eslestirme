@@ -43,8 +43,12 @@ function collectCandidates(gruplar) {
   for (const grup of gruplar) {
     for (const varlik of grup.varliklar) {
       for (const ozellik of varlik.ozellikler) {
-        // ozellik -> ad: her zaman güvenli (her özellik değeri benzersizdir)
-        cands.push({ grup, varlik, ozellik, yon: 'ozellik-ad' })
+        // ozellik -> ad: yalnızca bu (tip, deger) çifti grup içinde eşsizse güvenli.
+        // (Değer başka varlıklarda da geçiyorsa, "bu değere sahip varlık kim?" belirsiz olur.)
+        const valueOccurrences = grup.varliklar.reduce((cnt, vv) => cnt + vv.ozellikler.filter(oo => oo.tip === ozellik.tip && oo.deger === ozellik.deger).length, 0)
+        if (valueOccurrences === 1) {
+          cands.push({ grup, varlik, ozellik, yon: 'ozellik-ad' })
+        }
 
         // ad -> ozellik: yalnızca terim grubu VE bu varlığın bu tipte tek özelliği varsa güvenli
         if (grup.tip === 'terim' && countOzellikByTip(varlik, ozellik.tip) === 1) {
@@ -103,6 +107,42 @@ function formatOzellikAd(grup, ozellik) {
     case 'osmanli_vergiler':
       return `${d}\n\nBu tanıma uyan vergi hangisidir?`
 
+    case 'islamiyet_oncesi_kurucular':
+      if (ozellik.tip === 'devlet') return `${d.replace(/\s*Devleti$/, '')} devletinin kurucusu kimdir?`
+      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+
+    case 'islamiyet_oncesi_hukumdarlar':
+      if (ozellik.tip === 'devlet') return `${d.replace(/\s*Devleti$/, '')} devleti en güçlü / en parlak dönemini hangi hükümdar zamanında yaşamıştır?`
+      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+
+    case 'islamiyet_oncesi_ozel_bilgiler':
+      return `${d}\n\nBu bilgi kime / hangisine aittir?`
+
+    case 'islamiyet_oncesi_destanlar':
+      if (ozellik.tip === 'topluluk') return `${d} topluluğuna ait destan aşağıdakilerden hangisidir?`
+      return `${d}\n\nBu bilgi hangi destana aittir?`
+
+    case 'islamiyet_oncesi_kavramlar':
+      if (ozellik.tip === 'tanim') return `İslamiyet öncesi Türklerde "${d}" anlamına gelen kavram aşağıdakilerden hangisidir?`
+      return `${d}\n\nBu bilgi hangi kavrama aittir?`
+
+    case 'ilk_musluman_kurucular':
+      if (ozellik.tip === 'devlet') return `${d} devletinin kurucusu kimdir?`
+      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+
+    case 'ilk_musluman_ozel_bilgiler':
+      return `${d}\n\nBu bilgi kime / hangisine aittir?`
+
+    case 'anadolu_beylikleri_eserleri':
+      // Her eser bir beyliğe ait; birden çok eser aynı beyliğe ait olduğu için
+      // "hangi eser bu beyliğe aittir?" sorusu jeneratörde otomatik olarak
+      // atlanır (değer benzersizlik kontrolü). Şablon güvenlik için burada.
+      return `${d} beyliğine ait eser aşağıdakilerden hangisidir?`
+
+    case 'anadolu_selcuklu_olaylar':
+      if (ozellik.tip === 'hukumdar') return `${d} döneminde yaşanan olaylardan biri aşağıdakilerden hangisidir?`
+      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+
     default:
       return `${d}\n\nBu bilgi kime aittir?`
   }
@@ -130,6 +170,40 @@ function formatAdOzellik(grup, varlik, ozellik) {
 
     case 'osmanli_vergiler':
       return `${ad} adlı vergi ne anlama gelir?`
+
+    case 'islamiyet_oncesi_kurucular':
+      if (ozellik.tip === 'devlet') return `${ad} hangi devletin kurucusudur?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+
+    case 'islamiyet_oncesi_hukumdarlar':
+      if (ozellik.tip === 'devlet') return `${ad} hangi devletin en güçlü / en parlak dönem hükümdarıdır?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+
+    case 'islamiyet_oncesi_ozel_bilgiler':
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
+    case 'islamiyet_oncesi_destanlar':
+      if (ozellik.tip === 'topluluk') return `${ad} hangi Türk topluluğuna aittir?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+
+    case 'islamiyet_oncesi_kavramlar':
+      if (ozellik.tip === 'tanim') return `İslamiyet öncesi Türklerde "${ad}" kavramı ne anlama gelir?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+
+    case 'ilk_musluman_kurucular':
+      if (ozellik.tip === 'devlet') return `${ad} hangi devletin kurucusudur?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+
+    case 'ilk_musluman_ozel_bilgiler':
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
+    case 'anadolu_beylikleri_eserleri':
+      if (ozellik.tip === 'beylik') return `${ad} hangi Anadolu beyliğine aittir?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+
+    case 'anadolu_selcuklu_olaylar':
+      if (ozellik.tip === 'hukumdar') return `${ad}\n\nBu olay hangi Anadolu Selçuklu hükümdarı döneminde yaşanmıştır?`
+      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
 
     default:
       return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`

@@ -750,6 +750,477 @@
           ]
         }
       ]
+    },
+    {
+      "id": "islamiyet_oncesi_kurucular",
+      "ad": "İslamiyet Öncesi Türk Devletleri — Kurucular",
+      "unite": "İslamiyet Öncesi Türk Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Teoman",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Asya Hun (Büyük Hun) Devleti" }
+          ]
+        },
+        {
+          "ad": "Bayan Han",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Avarlar" }
+          ]
+        },
+        {
+          "ad": "Asparuh",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Tuna Bulgarları" }
+          ]
+        },
+        {
+          "ad": "Bumin Kağan",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "I. Göktürk Devleti" }
+          ]
+        },
+        {
+          "ad": "Kutluk Kağan",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "II. Göktürk (Kutluk) Devleti" }
+          ]
+        },
+        {
+          "ad": "Kutluk Bilge Kül Kağan",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Uygurlar" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_hukumdarlar",
+      "ad": "İslamiyet Öncesi Türk Devletleri — En Güçlü Dönem Hükümdarları",
+      "unite": "İslamiyet Öncesi Türk Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Alper Tunga",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "İskitler (Sakalar)" }
+          ]
+        },
+        {
+          "ad": "Mete Han",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Asya Hun (Büyük Hun) Devleti" }
+          ]
+        },
+        {
+          "ad": "Omurtah Han",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Tuna Bulgarları" }
+          ]
+        },
+        {
+          "ad": "Mukan Kağan",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "I. Göktürk Devleti" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_ozel_bilgiler",
+      "ad": "İslamiyet Öncesi Türk Devletleri — Özel Bilgiler",
+      "unite": "İslamiyet Öncesi Türk Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Avarlar",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "İstanbul'u kuşatan ilk Türk devletidir" }
+          ]
+        },
+        {
+          "ad": "Karluklar",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "İslamiyeti kabul eden ilk Türk topluluğudur" }
+          ]
+        },
+        {
+          "ad": "Simon",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Çar unvanını kullanan ilk Türk hükümdardır (Tuna Bulgarları)" }
+          ]
+        },
+        {
+          "ad": "Boris Han",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Tuna Bulgarlarının Hristiyanlığı kabul ettiği dönemin hükümdarıdır" }
+          ]
+        },
+        {
+          "ad": "Almış Han",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "İtil Bulgarlarının İslamiyeti kabul ettiği dönemin hükümdarıdır" }
+          ]
+        },
+        {
+          "ad": "Bögü Kağan",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Uygurların Mani dinine geçtiği dönemin hükümdarıdır" }
+          ]
+        },
+        {
+          "ad": "Baga Tarkan",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Türgişlerde kendi adına para bastıran hükümdardır" }
+          ]
+        },
+        {
+          "ad": "İbni Fadlan",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Rihle adlı eserinde İtil Bulgarlarından bahsetmiştir" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_destanlar",
+      "ad": "İslamiyet Öncesi Türk Destanları",
+      "unite": "İslamiyet Öncesi Türk Devletleri",
+      "kategori": "terimler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Alper Tunga Destanı",
+          "ozellikler": [
+            { "tip": "topluluk", "deger": "İskitler (Sakalar)" }
+          ]
+        },
+        {
+          "ad": "Oğuz Kağan Destanı",
+          "ozellikler": [
+            { "tip": "topluluk", "deger": "Asya Hunları" }
+          ]
+        },
+        {
+          "ad": "Ergenekon ve Bozkurt Destanları",
+          "ozellikler": [
+            { "tip": "topluluk", "deger": "Göktürkler" }
+          ]
+        },
+        {
+          "ad": "Türeyiş ve Göç Destanları",
+          "ozellikler": [
+            { "tip": "topluluk", "deger": "Uygurlar" }
+          ]
+        },
+        {
+          "ad": "Attila ve Sihirli Geyik Destanları",
+          "ozellikler": [
+            { "tip": "topluluk", "deger": "Avrupa Hunları" }
+          ]
+        },
+        {
+          "ad": "Manas Destanı",
+          "ozellikler": [
+            { "tip": "topluluk", "deger": "Kırgızlar" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_kavramlar",
+      "ad": "İslamiyet Öncesi — Devlet / Töre Unsurları ve Semboller",
+      "unite": "İslamiyet Öncesi Türk Devletleri",
+      "kategori": "terimler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Oksızlık",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Bağımsızlık (devletin dört unsurundan biri)" }
+          ]
+        },
+        {
+          "ad": "Ülke",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Toprak / vatan (devletin dört unsurundan biri)" }
+          ]
+        },
+        {
+          "ad": "Kün",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Halk (devletin dört unsurundan biri)" }
+          ]
+        },
+        {
+          "ad": "Teşkilat",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Örgütlenme (devletin dört unsurundan biri)" }
+          ]
+        },
+        {
+          "ad": "Könilik",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Adalet (törenin değişmez dört kuralından biri)" }
+          ]
+        },
+        {
+          "ad": "Uzluk",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "İyilik (törenin değişmez dört kuralından biri)" }
+          ]
+        },
+        {
+          "ad": "İnsanlık",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Kişilik (törenin değişmez dört kuralından biri)" }
+          ]
+        },
+        {
+          "ad": "Tüzlük",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Eşitlik (törenin değişmez dört kuralından biri)" }
+          ]
+        },
+        {
+          "ad": "Örgin",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Taht (hükümdarlık sembollerinden biri)" }
+          ]
+        },
+        {
+          "ad": "Nevbet",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Davul (hükümdarlık sembollerinden biri)" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ilk_musluman_kurucular",
+      "ad": "İlk Müslüman Türk Devletleri — Kurucular",
+      "unite": "İlk Müslüman Türk Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Bilge Kül Kadır Han",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Karahanlılar" }
+          ]
+        },
+        {
+          "ad": "Alp Tigin",
+          "ozellikler": [
+            { "tip": "devlet", "deger": "Gazneliler" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ilk_musluman_ozel_bilgiler",
+      "ad": "İlk Müslüman Türk Devletleri — Özel Bilgiler",
+      "unite": "İlk Müslüman Türk Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Satuk Buğra Han",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Karahanlıların İslamiyeti kabul ettiği dönemin hükümdarıdır" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anadolu_beylikleri_eserleri",
+      "ad": "Anadolu Beylikleri — Eserler",
+      "unite": "Anadolu Türk-İslam Devletleri",
+      "kategori": "terimler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Kayseri Ulu Camii",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Danişmentliler" }
+          ]
+        },
+        {
+          "ad": "Yağıbasan Medresesi",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Danişmentliler", "aciklama": "Anadolu'da yapılan ilk medresedir." }
+          ]
+        },
+        {
+          "ad": "Kale Camii",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Saltuklar" }
+          ]
+        },
+        {
+          "ad": "Tepsi Minare",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Saltuklar" }
+          ]
+        },
+        {
+          "ad": "Üç Kümbetler",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Saltuklar" }
+          ]
+        },
+        {
+          "ad": "Mama Hatun Türbesi",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Saltuklar" }
+          ]
+        },
+        {
+          "ad": "Micingerd Kalesi",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Saltuklar" }
+          ]
+        },
+        {
+          "ad": "Divriği Ulu Camii",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Mengücekler", "aciklama": "1985'ten beri UNESCO Dünya Mirası Listesi'nde koruma altındadır." }
+          ]
+        },
+        {
+          "ad": "Hasankeyf",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Artuklar" }
+          ]
+        },
+        {
+          "ad": "Malabadi Köprüsü",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Artuklar" }
+          ]
+        },
+        {
+          "ad": "Hatuniye Medresesi",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Artuklar" }
+          ]
+        },
+        {
+          "ad": "Necmettin Külliyesi",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Artuklar" }
+          ]
+        },
+        {
+          "ad": "Koçhisar Ulu Camii",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Artuklar" }
+          ]
+        },
+        {
+          "ad": "Semanın Medresesi",
+          "ozellikler": [
+            { "tip": "beylik", "deger": "Artuklar" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anadolu_selcuklu_olaylar",
+      "ad": "Anadolu Selçuklu Devleti — Hükümdar Dönemi Olayları",
+      "unite": "Anadolu Türk-İslam Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Anadolu Selçuklu Devleti'nin İznik'te kurulması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "Kutalmışoğlu Süleyman Şah" }
+          ]
+        },
+        {
+          "ad": "I. Haçlı Seferi sonucu İznik'in kaybedilmesi ve başkentin Konya'ya taşınması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Kılıç Arslan" }
+          ]
+        },
+        {
+          "ad": "1176 Miryokefalon Savaşı'nın Bizans'a karşı kazanılması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "II. Kılıç Arslan" }
+          ]
+        },
+        {
+          "ad": "Ölmeden önce ülke topraklarının 11 oğul arasında paylaştırılması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "II. Kılıç Arslan" }
+          ]
+        },
+        {
+          "ad": "Antalya'nın ilk kez fethedilmesi",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Gıyaseddin Keyhüsrev", "aciklama": "İki defa tahta çıkan hükümdardır." }
+          ]
+        },
+        {
+          "ad": "Venedik ile ilk ticaret anlaşmasının imzalanması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Gıyaseddin Keyhüsrev" }
+          ]
+        },
+        {
+          "ad": "Sinop'un ilk kez fethedilmesi",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. İzzeddin Keykâvus" }
+          ]
+        },
+        {
+          "ad": "Samsun ve Antalya'nın tekrar fethedilmesi",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. İzzeddin Keykâvus" }
+          ]
+        },
+        {
+          "ad": "Anadolu Selçuklu Devleti'nin en parlak dönemini yaşaması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Alâeddin Keykubat" }
+          ]
+        },
+        {
+          "ad": "Suğdak Limanı'nın fethedilmesi",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Alâeddin Keykubat" }
+          ]
+        },
+        {
+          "ad": "Alanya'nın (Kalonoros) alınması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Alâeddin Keykubat" }
+          ]
+        },
+        {
+          "ad": "Harzemşahlarla Yassıçimen Savaşı'nın yapılması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "I. Alâeddin Keykubat", "aciklama": "Savaş kazanıldı; fakat Harzemşahların yıkılmasıyla Anadolu Selçuklu Devleti Moğollara komşu oldu." }
+          ]
+        },
+        {
+          "ad": "Baba İshak İsyanı'nın yaşanması",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "II. Gıyaseddin Keyhüsrev" }
+          ]
+        },
+        {
+          "ad": "1243 Kösedağ Savaşı'nın Moğollara (İlhanlılar) karşı kaybedilmesi",
+          "ozellikler": [
+            { "tip": "hukumdar", "deger": "II. Gıyaseddin Keyhüsrev" }
+          ]
+        }
+      ]
     }
   ]
 }

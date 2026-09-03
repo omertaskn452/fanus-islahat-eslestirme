@@ -7,10 +7,22 @@ const COUNT_OPTIONS = [15, 35, 75, 125, 'Tümü']
 
 const UNITE_LIST = [
   {
+    id: 'İslamiyet Öncesi Türk Devletleri',
+    ad: 'İslamiyet Öncesi Türk Devletleri',
+    kisa: 'İslamiyet Öncesi',
+    aciklama: 'Kurucular, hükümdarlar, destanlar, devlet/töre unsurları, semboller',
+  },
+  {
     id: 'İlk Müslüman Türk Devletleri',
     ad: 'İlk Müslüman Türk Devletleri',
     kisa: 'İlk Müslüman Türk',
-    aciklama: 'Bilim insanları, yazarlar, saray/devlet görevlileri, divanlar',
+    aciklama: 'Bilim insanları, yazarlar, saray/devlet görevlileri, divanlar, kurucular',
+  },
+  {
+    id: 'Anadolu Türk-İslam Devletleri',
+    ad: 'Anadolu Türk-İslam Devletleri',
+    kisa: 'Anadolu Türk-İslam',
+    aciklama: 'Anadolu beylikleri eserleri, Anadolu Selçuklu hükümdar dönemleri',
   },
   {
     id: 'Osmanlı Kültür ve Medeniyeti',

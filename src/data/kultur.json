@@ -2,6 +2,7 @@
   "gruplar": [
     {
       "id": "turk_islam_bilim_insanlari",
+      "cevapTuru": "kisi",
       "ad": "Türk-İslam Bilim İnsanları",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "kisiler",
@@ -91,6 +92,7 @@
     },
     {
       "id": "ilk_turk_islam_yazarlari",
+      "cevapTuru": "kisi",
       "ad": "İlk Türk-İslam Yazılı Eserleri",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "kisiler",
@@ -138,6 +140,7 @@
     },
     {
       "id": "saray_gorevlileri",
+      "cevapTuru": "gorevli",
       "ad": "Saray Görevlileri",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "terimler",
@@ -189,6 +192,7 @@
     },
     {
       "id": "devlet_gorevlileri",
+      "cevapTuru": "gorevli",
       "ad": "Devlet Görevlileri",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "terimler",
@@ -246,6 +250,7 @@
     },
     {
       "id": "divanlar",
+      "cevapTuru": "divan",
       "ad": "Divanlar",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "terimler",
@@ -310,6 +315,7 @@
     },
     {
       "id": "osmanli_toprak_yonetimi",
+      "cevapTuru": "toprak",
       "ad": "Osmanlı Toprak Yönetimi",
       "unite": "Osmanlı Kültür ve Medeniyeti",
       "kategori": "terimler",
@@ -415,10 +421,14 @@
     },
     {
       "id": "osmanli_bilim_insanlari",
+      "cevapTuru": "kisi",
       "ad": "Osmanlı Bilim İnsanları",
       "unite": "Osmanlı Kültür ve Medeniyeti",
       "kategori": "kisiler",
       "tip": "kisi",
+      "birlikteSorulanlar": [
+        ["Akşemseddin", "Sabuncuoğlu Şerafettin"]
+      ],
       "varliklar": [
         {
           "ad": "Yahşi Fakih",
@@ -549,6 +559,7 @@
     },
     {
       "id": "osmanli_ekonomi_kavramlar",
+      "cevapTuru": "kavram",
       "ad": "Osmanlı Ekonomi Kavramları",
       "unite": "Osmanlı Kültür ve Medeniyeti",
       "kategori": "terimler",
@@ -654,6 +665,7 @@
     },
     {
       "id": "osmanli_vergiler",
+      "cevapTuru": "vergi",
       "ad": "Osmanlı Vergileri",
       "unite": "Osmanlı Kültür ve Medeniyeti",
       "kategori": "terimler",
@@ -753,6 +765,7 @@
     },
     {
       "id": "islamiyet_oncesi_kurucular",
+      "cevapTuru": "hukumdar",
       "ad": "İslamiyet Öncesi Türk Devletleri — Kurucular",
       "unite": "İslamiyet Öncesi Türk Devletleri",
       "kategori": "kisiler",
@@ -798,6 +811,7 @@
     },
     {
       "id": "islamiyet_oncesi_hukumdarlar",
+      "cevapTuru": "hukumdar",
       "ad": "İslamiyet Öncesi Türk Devletleri — En Güçlü Dönem Hükümdarları",
       "unite": "İslamiyet Öncesi Türk Devletleri",
       "kategori": "kisiler",
@@ -831,6 +845,7 @@
     },
     {
       "id": "islamiyet_oncesi_ozel_bilgiler",
+      "cevapTuru": "hukumdar",
       "ad": "İslamiyet Öncesi Türk Devletleri — Özel Bilgiler",
       "unite": "İslamiyet Öncesi Türk Devletleri",
       "kategori": "kisiler",
@@ -838,12 +853,14 @@
       "varliklar": [
         {
           "ad": "Avarlar",
+          "tur": "topluluk",
           "ozellikler": [
             { "tip": "ozellik", "deger": "İstanbul'u kuşatan ilk Türk devletidir" }
           ]
         },
         {
           "ad": "Karluklar",
+          "tur": "topluluk",
           "ozellikler": [
             { "tip": "ozellik", "deger": "İslamiyeti kabul eden ilk Türk topluluğudur" }
           ]
@@ -880,6 +897,7 @@
         },
         {
           "ad": "İbni Fadlan",
+          "tur": "kisi",
           "ozellikler": [
             { "tip": "ozellik", "deger": "Rihle adlı eserinde İtil Bulgarlarından bahsetmiştir" }
           ]
@@ -888,6 +906,7 @@
     },
     {
       "id": "islamiyet_oncesi_destanlar",
+      "cevapTuru": "destan",
       "ad": "İslamiyet Öncesi Türk Destanları",
       "unite": "İslamiyet Öncesi Türk Devletleri",
       "kategori": "terimler",
@@ -1003,6 +1022,7 @@
     },
     {
       "id": "ilk_musluman_kurucular",
+      "cevapTuru": "hukumdar",
       "ad": "İlk Müslüman Türk Devletleri — Kurucular",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "kisiler",
@@ -1024,6 +1044,7 @@
     },
     {
       "id": "ilk_musluman_ozel_bilgiler",
+      "cevapTuru": "hukumdar",
       "ad": "İlk Müslüman Türk Devletleri — Özel Bilgiler",
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "kisiler",
@@ -1039,6 +1060,7 @@
     },
     {
       "id": "anadolu_beylikleri_eserleri",
+      "cevapTuru": "eser",
       "ad": "Anadolu Beylikleri — Eserler",
       "unite": "Anadolu Türk-İslam Devletleri",
       "kategori": "terimler",
@@ -1132,6 +1154,7 @@
     },
     {
       "id": "anadolu_selcuklu_olaylar",
+      "cevapTuru": "olay",
       "ad": "Anadolu Selçuklu Devleti — Hükümdar Dönemi Olayları",
       "unite": "Anadolu Türk-İslam Devletleri",
       "kategori": "kisiler",

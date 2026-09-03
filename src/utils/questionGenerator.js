@@ -257,7 +257,35 @@ function formatAdOzellik(grup, varlik, ozellik) {
   }
 }
 
-// Doğru cevap ve çeldirici havuzu üret
+// Karıştırılan varlıklar: grubun "birlikteSorulanlar" listesinde aynı sette
+// yer alan adlar, biri doğru cevap olduğunda diğerleri mutlaka şıklara girer.
+// Böylece ayırt etmesi zor kişiler hep yan yana görülür.
+function partnersOf(grup, varlikAd) {
+  const setler = grup.birlikteSorulanlar || []
+  const out = []
+  for (const set of setler) {
+    if (!set.includes(varlikAd)) continue
+    for (const ad of set) if (ad !== varlikAd) out.push(ad)
+  }
+  return out
+}
+
+// Bir varlığın cevap türü: varlık kendi 'tur' alanıyla grubu ezebilir.
+// (Karışık gruplarda, ör. hükümdar + topluluk aynı grupta.)
+function turOf(grup, varlik) {
+  return varlik.tur || grup.cevapTuru || null
+}
+
+// Doğru cevap ve katmanlı çeldirici havuzu üret.
+// tiers: öncelik sırasına göre havuzlar; şıklar baştan doldurulur.
+//   1) pinned    - karıştırılan eşler, her zaman girer
+//   2) aynı grup + aynı tür
+//   3) seçili gruplar arasında aynı cevap türü
+//   4) tüm gruplar arasında aynı cevap türü (ünite farketmez)
+//   5) aynı grup, farklı tür
+//   6) son çare: seçili gruplardan herhangi bir ad
+// Tür uyumu grup yakınlığından önce gelir: bir seyyah sorusuna hükümdar
+// çeldirici koymaktansa başka gruptaki bilim insanlarını kullanmak daha iyi.
 function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
   const { grup, varlik, ozellik, yon } = cand
 
@@ -265,66 +293,109 @@ function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
   if (yon === 'sinif-olan' || yon === 'sinif-olmayan') {
     const correct = varlik.ad
     const siniflar = collectSiniflar(grup)
-    const primary = []
+    const havuz = []
     if (yon === 'sinif-olan') {
       // Çeldiriciler sorulan sınıfın DIŞINDAN gelir
       for (const [sinif, uyeler] of siniflar) {
         if (sinif === cand.sorulanSinif) continue
-        for (const u of uyeler) if (u !== correct) primary.push(u)
+        for (const u of uyeler) if (u !== correct) havuz.push(u)
       }
     } else {
       // Çeldiriciler sorulan sınıfın ÜYELERİDİR (doğru cevap o sınıfa ait değil)
       for (const u of siniflar.get(cand.sorulanSinif) || []) {
-        if (u !== correct) primary.push(u)
+        if (u !== correct) havuz.push(u)
       }
     }
-    return { correct, primary, secondary: [] }
+    return { correct, tiers: [havuz] }
   }
 
   if (yon === 'ozellik-ad') {
     // Cevap = varlık adı
     const correct = varlik.ad
-    // Öncelik: aynı grup içindeki diğer varlık adları
-    const primary = grup.varliklar
-      .map(v => v.ad)
-      .filter(a => a !== correct)
-    // Fallback: aynı kategori (deste) içindeki diğer gruplar
-    const secondary = []
+    const hedefTur = turOf(grup, varlik)
+    const pinned = partnersOf(grup, correct)
+
+    // Aynı grup: önce aynı tür, sonra farklı tür
+    const ayniGrupAyniTur = []
+    const ayniGrupFarkliTur = []
+    for (const v of grup.varliklar) {
+      if (v.ad === correct) continue
+      ;(turOf(grup, v) === hedefTur ? ayniGrupAyniTur : ayniGrupFarkliTur).push(v.ad)
+    }
+
+    // Diğer gruplar: yalnızca cevap türü uyanlar
+    const turUyanAdlar = (gruplar) => {
+      const out = []
+      for (const g of gruplar) {
+        if (g.id === grup.id) continue
+        for (const v of g.varliklar) {
+          if (v.ad === correct) continue
+          if (turOf(g, v) === hedefTur) out.push(v.ad)
+        }
+      }
+      return out
+    }
+    const secili = hedefTur ? turUyanAdlar(sameCatGruplar) : []
+    const tumu = hedefTur ? turUyanAdlar(allGruplar) : []
+
+    // Son çare: tür bilgisi olmayan/uymayan adlar (soru şıksız kalmasın)
+    const sonCare = []
     for (const g of sameCatGruplar) {
       if (g.id === grup.id) continue
-      for (const v of g.varliklar) {
-        if (v.ad !== correct && !primary.includes(v.ad)) secondary.push(v.ad)
-      }
+      for (const v of g.varliklar) if (v.ad !== correct) sonCare.push(v.ad)
     }
-    return { correct, primary, secondary }
+
+    return {
+      correct,
+      tiers: [pinned, ayniGrupAyniTur, secili, tumu, ayniGrupFarkliTur, sonCare],
+    }
   }
 
   // ad -> ozellik: Cevap = özellik değeri
   const correct = ozellik.deger
+  // Karıştırılan eşin aynı tipteki özellikleri her zaman şıklara girer
+  const esAdlari = partnersOf(grup, varlik.ad)
+  const pinned = []
+  for (const v of grup.varliklar) {
+    if (!esAdlari.includes(v.ad)) continue
+    for (const o of v.ozellikler) {
+      if (o.tip === ozellik.tip && o.deger !== correct && !pinned.includes(o.deger)) {
+        pinned.push(o.deger)
+      }
+    }
+  }
   // Aynı grup içinde aynı tipteki diğer özellik değerleri
   const primary = []
   for (const v of grup.varliklar) {
     if (v.ad === varlik.ad) continue
     for (const o of v.ozellikler) {
-      if (o.tip === ozellik.tip && o.deger !== correct && !primary.includes(o.deger)) {
+      if (o.tip === ozellik.tip && o.deger !== correct
+          && !pinned.includes(o.deger) && !primary.includes(o.deger)) {
         primary.push(o.deger)
       }
     }
   }
-  // Fallback: kategori içinden aynı tip
-  const secondary = []
-  for (const g of sameCatGruplar) {
-    if (g.id === grup.id) continue
-    for (const v of g.varliklar) {
-      for (const o of v.ozellikler) {
-        if (o.tip === ozellik.tip && o.deger !== correct
-            && !primary.includes(o.deger) && !secondary.includes(o.deger)) {
-          secondary.push(o.deger)
+  // Fallback: aynı özellik tipinden değerler. Önce seçili gruplar, sonra
+  // tüm gruplar (küçük gruplarda soru 2 şıkta kalmasın diye ünite sınırı aşılır).
+  const digerTipDegerleri = (gruplar, haric) => {
+    const out = []
+    for (const g of gruplar) {
+      if (g.id === grup.id) continue
+      for (const v of g.varliklar) {
+        for (const o of v.ozellikler) {
+          if (o.tip !== ozellik.tip || o.deger === correct) continue
+          if (pinned.includes(o.deger) || primary.includes(o.deger)) continue
+          if (haric.includes(o.deger) || out.includes(o.deger)) continue
+          out.push(o.deger)
         }
       }
     }
+    return out
   }
-  return { correct, primary, secondary }
+  const secondary = digerTipDegerleri(sameCatGruplar, [])
+  const tertiary = digerTipDegerleri(allGruplar, secondary)
+
+  return { correct, tiers: [pinned, primary, secondary, tertiary] }
 }
 
 // Ana fonksiyon: seçilen ünite + destede N soru üret
@@ -362,16 +433,17 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
   const questions = []
   for (let i = 0; i < picked.length; i++) {
     const cand = picked[i]
-    const { correct, primary, secondary } = buildAnswerAndPool(
+    const { correct, tiers } = buildAnswerAndPool(
       cand,
       allGruplar,
       selectedGruplar,
     )
-    // 3 çeldirici seç
-    let distractors = shuffle(primary).slice(0, 3)
-    if (distractors.length < 3) {
-      const need = 3 - distractors.length
-      distractors = distractors.concat(shuffle(secondary).slice(0, need))
+    // 3 çeldiriciyi katman sırasına göre topla: üst katman tükenmeden alta inilmez.
+    const distractors = []
+    for (const tier of tiers) {
+      if (distractors.length >= 3) break
+      const uygun = shuffle(tier.filter(x => x !== correct && !distractors.includes(x)))
+      distractors.push(...uygun.slice(0, 3 - distractors.length))
     }
     // Havuz yine yetmiyorsa (küçük grup), soruyu yine de üretiriz ama 2-3 şık olur.
     const secenekler = shuffle([correct, ...distractors])

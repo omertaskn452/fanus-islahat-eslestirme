@@ -1,0 +1,8 @@
+{
+  "_aciklama": "Nominatim'in yanlış yeri bulduğu noktalar. Buradaki değerler geocode.mjs tarafından her zaman tercih edilir.",
+
+  "Guleman|Elazığ": { "lat": 38.5, "lng": 39.9, "_not": "Alacakaya ilçe merkezi il sınırının hemen dışına düşüyordu" },
+  "Kırıkkale|Kırıkkale": { "lat": 39.8468, "lng": 33.5153, "_not": "Nominatim merkez yerine ilçe alanının kuzeyini veriyordu" },
+  "Tuz Gölü|Aksaray": { "lat": 38.62, "lng": 33.5, "_not": "Göl 3 ile yayılıyor; Aksaray kıyısındaki nokta seçildi" },
+  "Marmara Adası|Balıkesir": { "lat": 40.605, "lng": 27.6, "_not": "Ada kaynak GeoJSON'da yok, build-map.mjs elle çiziyor" }
+}

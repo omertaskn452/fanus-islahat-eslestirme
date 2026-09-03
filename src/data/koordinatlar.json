@@ -1,0 +1,374 @@
+{
+  "Afyonkarahisar|Afyonkarahisar": {
+    "lat": 38.7569,
+    "lng": 30.5387,
+    "kaynak": "Afyonkarahisar Merkez, Afyonkarahisar, Ege Bölgesi, Türkiye"
+  },
+  "Akseki|Antalya": {
+    "lat": 37.0456,
+    "lng": 31.7897,
+    "kaynak": "Akseki, Antalya, Akdeniz Bölgesi, Türkiye"
+  },
+  "Alanya|Antalya": {
+    "lat": 36.8866,
+    "lng": 30.703,
+    "kaynak": "Antalya, Muratpaşa, Antalya, Akdeniz Bölgesi, 07050, Türkiye"
+  },
+  "Amasya|Amasya": {
+    "lat": 40.6503,
+    "lng": 35.8329,
+    "kaynak": "Amasya, Dere Mahallesi, Amasya Merkez, Amasya, Karadeniz Bölgesi, 05100, Türkiye"
+  },
+  "Ankara|Ankara": {
+    "lat": 39.9208,
+    "lng": 32.854,
+    "kaynak": "Ankara, Çankaya, Ankara, İç Anadolu Bölgesi, 06420, Türkiye"
+  },
+  "Antalya|Antalya": {
+    "lat": 36.8866,
+    "lng": 30.703,
+    "kaynak": "Antalya, Muratpaşa, Antalya, Akdeniz Bölgesi, 07050, Türkiye"
+  },
+  "Ardahan|Ardahan": {
+    "lat": 41.1103,
+    "lng": 42.7036,
+    "kaynak": "Ardahan Merkez, Ardahan, Doğu Anadolu Bölgesi, 75000, Türkiye"
+  },
+  "Artvin|Artvin": {
+    "lat": 41.1831,
+    "lng": 41.8287,
+    "kaynak": "Artvin Merkez, Artvin, Karadeniz Bölgesi, 08000, Türkiye"
+  },
+  "Aşağı Fırat Bölümü|Şanlıurfa": {
+    "lat": 37.2595,
+    "lng": 39.0408,
+    "kaynak": "Şanlıurfa, Güneydoğu Anadolu Bölgesi, Türkiye"
+  },
+  "Aydın|Aydın": {
+    "lat": 37.8484,
+    "lng": 27.8436,
+    "kaynak": "Aydın, Efeler, Aydın, Ege Bölgesi, 09110, Türkiye"
+  },
+  "Balıkesir|Balıkesir": {
+    "lat": 39.6474,
+    "lng": 27.888,
+    "kaynak": "Balıkesir, Karesi, Balıkesir, Marmara Bölgesi, 10100, Türkiye"
+  },
+  "Bandırma|Balıkesir": {
+    "lat": 40.3555,
+    "lng": 27.9698,
+    "kaynak": "Bandırma, Balıkesir, Marmara Bölgesi, Türkiye"
+  },
+  "Bayburt|Bayburt": {
+    "lat": 40.2552,
+    "lng": 40.2205,
+    "kaynak": "Bayburt Merkez, Bayburt, Karadeniz Bölgesi, 69000, Türkiye"
+  },
+  "Beypazarı|Ankara": {
+    "lat": 40.1656,
+    "lng": 31.9205,
+    "kaynak": "Beypazarı, Ankara, İç Anadolu Bölgesi, 06730, Türkiye"
+  },
+  "Bigadiç|Balıkesir": {
+    "lat": 39.3913,
+    "lng": 28.132,
+    "kaynak": "Bigadiç, Balıkesir, Marmara Bölgesi, Türkiye"
+  },
+  "Bilecik|Bilecik": {
+    "lat": 40.1435,
+    "lng": 29.9753,
+    "kaynak": "Bilecik Merkez, Bilecik, Marmara Bölgesi, Türkiye"
+  },
+  "Bingöl|Bingöl": {
+    "lat": 38.8861,
+    "lng": 40.4972,
+    "kaynak": "Bingöl Merkez, Bingöl, Doğu Anadolu Bölgesi, 12000, Türkiye"
+  },
+  "Bitlis|Bitlis": {
+    "lat": 38.4021,
+    "lng": 42.1085,
+    "kaynak": "Bitlis Merkez, Bitlis, Doğu Anadolu Bölgesi, 13000, Türkiye"
+  },
+  "Bodrum|Muğla": {
+    "lat": 37.0344,
+    "lng": 27.4307,
+    "kaynak": "Bodrum, Muğla, Ege Bölgesi, Türkiye"
+  },
+  "Bursa|Bursa": {
+    "lat": 40.1826,
+    "lng": 29.0675,
+    "kaynak": "Bursa, Osmangazi, Bursa, Marmara Bölgesi, 16010, Türkiye"
+  },
+  "Çayeli|Rize": {
+    "lat": 41.0878,
+    "lng": 40.7237,
+    "kaynak": "Çayeli, Rize, Karadeniz Bölgesi, Türkiye"
+  },
+  "Denizli|Denizli": {
+    "lat": 37.7828,
+    "lng": 29.0966,
+    "kaynak": "Denizli, Pamukkale, Denizli, Ege Bölgesi, 20175, Türkiye"
+  },
+  "Divriği|Sivas": {
+    "lat": 39.3712,
+    "lng": 38.1155,
+    "kaynak": "Divriği, Sivas, İç Anadolu Bölgesi, 58300, Türkiye"
+  },
+  "Eğirdir|Isparta": {
+    "lat": 37.8744,
+    "lng": 30.85,
+    "kaynak": "Eğirdir, Isparta, Akdeniz Bölgesi, 32500, Türkiye"
+  },
+  "Elazığ|Elazığ": {
+    "lat": 38.6747,
+    "lng": 39.2227,
+    "kaynak": "Elâzığ Merkez, Elâzığ, Doğu Anadolu Bölgesi, Türkiye"
+  },
+  "Emet|Kütahya": {
+    "lat": 39.3415,
+    "lng": 29.2586,
+    "kaynak": "Emet, Kütahya, Ege Bölgesi, Türkiye"
+  },
+  "Ereğli|Zonguldak": {
+    "lat": 41.2151,
+    "lng": 31.4103,
+    "kaynak": "Kdz. Ereğli Belediye Plajı, Göktepe, Ereğli, Zonguldak, Karadeniz Bölgesi, Türkiye"
+  },
+  "Erzincan|Erzincan": {
+    "lat": 39.7468,
+    "lng": 39.491,
+    "kaynak": "Erzincan Merkez, Erzincan, Doğu Anadolu Bölgesi, Türkiye"
+  },
+  "Erzurum|Erzurum": {
+    "lat": 39.9063,
+    "lng": 41.2728,
+    "kaynak": "Erzurum, Yakutiye, Erzurum, Doğu Anadolu Bölgesi, 25050, Türkiye"
+  },
+  "Eskişehir|Eskişehir": {
+    "lat": 39.7744,
+    "lng": 30.5191,
+    "kaynak": "Eskişehir, Odunpazarı, Eskişehir, İç Anadolu Bölgesi, 26010, Türkiye"
+  },
+  "Feke-Mansurlu Havzası|Adana": {
+    "lat": 37.8673,
+    "lng": 35.6234,
+    "kaynak": "Mansurlu, Feke, Adana, Akdeniz Bölgesi, Türkiye"
+  },
+  "Fethiye|Muğla": {
+    "lat": 36.6221,
+    "lng": 29.1153,
+    "kaynak": "Fethiye, Muğla, Ege Bölgesi, Türkiye"
+  },
+  "Guleman|Elazığ": {
+    "lat": 38.5,
+    "lng": 39.9,
+    "_not": "Alacakaya ilçe merkezi il sınırının hemen dışına düşüyordu",
+    "kaynak": "elle"
+  },
+  "Hasançelebi|Malatya": {
+    "lat": 38.9279,
+    "lng": 37.8804,
+    "kaynak": "Hasançelebi, Hekimhan Kangal Yolu, Hekimhan, Malatya, Doğu Anadolu Bölgesi, Türkiye"
+  },
+  "Hatay|Hatay": {
+    "lat": 36.2025,
+    "lng": 36.1603,
+    "kaynak": "Hatay, Antakya, Hatay, Akdeniz Bölgesi, 31040, Türkiye"
+  },
+  "Hekimhan|Malatya": {
+    "lat": 38.8107,
+    "lng": 37.9278,
+    "kaynak": "Hekimhan, İstasyon Caddesi, Mimar Sinan Mahallesi, Turgut Özal Mahallesi, Hekimhan, Malatya, Doğu Anadolu Bölgesi, Türkiye"
+  },
+  "İskenderun|Hatay": {
+    "lat": 36.5902,
+    "lng": 36.171,
+    "kaynak": "İskenderun, Hatay, Akdeniz Bölgesi, Türkiye"
+  },
+  "İzmir|İzmir": {
+    "lat": 38.4193,
+    "lng": 27.1285,
+    "kaynak": "İzmir, Konak, İzmir, Ege Bölgesi, 35250, Türkiye"
+  },
+  "İzmit|Kocaeli": {
+    "lat": 40.7654,
+    "lng": 29.9407,
+    "kaynak": "Kocaeli, İzmit, Kocaeli, Marmara Bölgesi, 41040, Türkiye"
+  },
+  "Kahramankazan|Ankara": {
+    "lat": 40.2054,
+    "lng": 32.6813,
+    "kaynak": "Kahramankazan, Ankara, İç Anadolu Bölgesi, 06980, Türkiye"
+  },
+  "Kahramanmaraş|Kahramanmaraş": {
+    "lat": 37.5813,
+    "lng": 36.9275,
+    "kaynak": "Kahramanmaraş, Dulkadiroğlu, Kahramanmaraş, Akdeniz Bölgesi, 36002, Türkiye"
+  },
+  "Karabük|Karabük": {
+    "lat": 41.1955,
+    "lng": 32.6231,
+    "kaynak": "Karabük Merkez, Karabük, Karadeniz Bölgesi, Türkiye"
+  },
+  "Kayseri|Kayseri": {
+    "lat": 38.7219,
+    "lng": 35.4873,
+    "kaynak": "Kayseri, Melikgazi, Kayseri, İç Anadolu Bölgesi, 38010, Türkiye"
+  },
+  "Keçiborlu|Isparta": {
+    "lat": 37.9477,
+    "lng": 30.307,
+    "kaynak": "Keçiborlu, 32-76, Keçiborlu, Isparta, Akdeniz Bölgesi, 32700, Türkiye"
+  },
+  "Kesikköprü|Kırıkkale": {
+    "lat": 39.886,
+    "lng": 33.8279,
+    "kaynak": "Kırıkkale, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Kestelek|Bursa": {
+    "lat": 40.035,
+    "lng": 28.4133,
+    "kaynak": "Mustafakemalpaşa, Bursa, Marmara Bölgesi, 16500, Türkiye"
+  },
+  "Kırka|Eskişehir": {
+    "lat": 39.282,
+    "lng": 30.5272,
+    "kaynak": "Kırka, Seyitgazi, Eskişehir, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Kırşehir|Kırşehir": {
+    "lat": 39.1461,
+    "lng": 34.1606,
+    "kaynak": "Kırşehir Merkez, Kırşehir, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Kop Dağı|Bayburt": {
+    "lat": 40.2023,
+    "lng": 40.2122,
+    "kaynak": "Bayburt, Karadeniz Bölgesi, Türkiye"
+  },
+  "Köyceğiz|Muğla": {
+    "lat": 36.9585,
+    "lng": 28.6889,
+    "kaynak": "Köyceğiz, Muğla, Ege Bölgesi, Türkiye"
+  },
+  "Küre|Kastamonu": {
+    "lat": 41.8059,
+    "lng": 33.7103,
+    "kaynak": "Küre, Kastamonu, Karadeniz Bölgesi, Türkiye"
+  },
+  "Kütahya|Kütahya": {
+    "lat": 39.4199,
+    "lng": 29.9858,
+    "kaynak": "Kütahya Merkez, Kütahya, Ege Bölgesi, Türkiye"
+  },
+  "Maden|Elazığ": {
+    "lat": 38.4013,
+    "lng": 39.669,
+    "kaynak": "Maden, Diyarbakır-Elazığ yolu, Maden, Elâzığ, Doğu Anadolu Bölgesi, Türkiye"
+  },
+  "Marmara Adası|Balıkesir": {
+    "lat": 40.605,
+    "lng": 27.6,
+    "_not": "Ada kaynak GeoJSON'da yok, build-map.mjs elle çiziyor",
+    "kaynak": "elle"
+  },
+  "Marmaris|Muğla": {
+    "lat": 36.8523,
+    "lng": 28.2743,
+    "kaynak": "Marmaris, Muğla, Ege Bölgesi, Türkiye"
+  },
+  "Mazıdağı|Mardin": {
+    "lat": 37.4773,
+    "lng": 40.4865,
+    "kaynak": "Mazıdağı, Mardin, Güneydoğu Anadolu Bölgesi, Türkiye"
+  },
+  "Mersin|Mersin": {
+    "lat": 36.7978,
+    "lng": 34.6298,
+    "kaynak": "Mersin, Akdeniz, Mersin, Akdeniz Bölgesi, 33060, Türkiye"
+  },
+  "Milas|Muğla": {
+    "lat": 37.3163,
+    "lng": 27.78,
+    "kaynak": "Milas, Muğla, Ege Bölgesi, Türkiye"
+  },
+  "Murgul|Artvin": {
+    "lat": 41.2797,
+    "lng": 41.5641,
+    "kaynak": "Murgul, Artvin, Karadeniz Bölgesi, Türkiye"
+  },
+  "Nevşehir|Nevşehir": {
+    "lat": 38.5872,
+    "lng": 34.7197,
+    "kaynak": "Nevşehir Merkez, Nevşehir, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Oltu|Erzurum": {
+    "lat": 40.5459,
+    "lng": 41.996,
+    "kaynak": "Oltu, Erzurum, Doğu Anadolu Bölgesi, 25400, Türkiye"
+  },
+  "Osmaniye|Osmaniye": {
+    "lat": 37.0734,
+    "lng": 36.2508,
+    "kaynak": "Osmaniye Merkez, Osmaniye, Akdeniz Bölgesi, Türkiye"
+  },
+  "Pınarbaşı|Kayseri": {
+    "lat": 38.7214,
+    "lng": 36.3941,
+    "kaynak": "Pınarbaşı, Kayseri, İç Anadolu Bölgesi, 38700, Türkiye"
+  },
+  "Rize|Rize": {
+    "lat": 41.0248,
+    "lng": 40.5199,
+    "kaynak": "Rize Merkez, Rize, Karadeniz Bölgesi, Türkiye"
+  },
+  "Samsun|Samsun": {
+    "lat": 41.2946,
+    "lng": 36.3321,
+    "kaynak": "Samsun, İlkadım, Samsun, Karadeniz Bölgesi, 55030, Türkiye"
+  },
+  "Seydişehir|Konya": {
+    "lat": 37.4194,
+    "lng": 31.8483,
+    "kaynak": "Seydişehir, Konya, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Seyitgazi|Eskişehir": {
+    "lat": 39.4443,
+    "lng": 30.696,
+    "kaynak": "Seyitgazi, Eskişehir, İç Anadolu Bölgesi, 26700, Türkiye"
+  },
+  "Sincan|Ankara": {
+    "lat": 39.964,
+    "lng": 32.5856,
+    "kaynak": "Sincan, Atatürk Caddesi, İstasyon Mahallesi, Sincan, Ankara, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Sivas|Sivas": {
+    "lat": 39.747,
+    "lng": 37.0396,
+    "kaynak": "Sivas Merkez, Sivas, İç Anadolu Bölgesi, Türkiye"
+  },
+  "Susurluk|Balıkesir": {
+    "lat": 39.9184,
+    "lng": 28.1532,
+    "kaynak": "Susurluk, Balıkesir, Marmara Bölgesi, Türkiye"
+  },
+  "Trabzon|Trabzon": {
+    "lat": 41.0055,
+    "lng": 39.7301,
+    "kaynak": "Trabzon, Ortahisar, Trabzon, Karadeniz Bölgesi, 61050, Türkiye"
+  },
+  "Uludağ|Bursa": {
+    "lat": 40.0705,
+    "lng": 29.222,
+    "kaynak": "Uludağ, Osmangazi, Bursa, Marmara Bölgesi, Türkiye"
+  },
+  "Van|Van": {
+    "lat": 38.5009,
+    "lng": 43.3946,
+    "kaynak": "Van, İpekyolu, Van, Doğu Anadolu Bölgesi, 65030, Türkiye"
+  },
+  "Yozgat|Yozgat": {
+    "lat": 39.8222,
+    "lng": 34.8081,
+    "kaynak": "Yozgat, Yozgat Merkez, Yozgat, İç Anadolu Bölgesi, 66100, Türkiye"
+  }
+}

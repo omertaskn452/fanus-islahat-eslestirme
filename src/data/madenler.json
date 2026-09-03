@@ -1,0 +1,721 @@
+{
+  "aciklama": "KPSS coğrafya — Türkiye'de madenler. Tüm içerik (madenler, çıkarıldığı yerler, işlendiği yerler, özellikler) kullanıcının kendi ders notlarından birebir alınmıştır; uygulama kendiliğinden bilgi eklemez. Koordinatlar tools/geocode.mjs ile src/data/koordinatlar.json içine üretilir.",
+  "madenler": [
+    {
+      "id": "bor",
+      "ad": "Bor",
+      "sahalar": [
+        {
+          "yer": "Bandırma",
+          "il": "Balıkesir"
+        },
+        {
+          "yer": "Bigadiç",
+          "il": "Balıkesir",
+          "asil": true
+        },
+        {
+          "yer": "Susurluk",
+          "il": "Balıkesir"
+        },
+        {
+          "yer": "Seyitgazi",
+          "il": "Eskişehir",
+          "asil": true
+        },
+        {
+          "yer": "Emet",
+          "il": "Kütahya",
+          "asil": true
+        },
+        {
+          "yer": "Kestelek",
+          "il": "Bursa",
+          "arama": "Mustafakemalpaşa, Bursa",
+          "not": "Mustafakemalpaşa",
+          "asil": true
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Kırka Boraks İşletmesi",
+          "yer": "Kırka",
+          "il": "Eskişehir",
+          "arama": "Kırka, Seyitgazi, Eskişehir"
+        },
+        {
+          "ad": "Bandırma Bor İşletmesi",
+          "yer": "Bandırma",
+          "il": "Balıkesir"
+        }
+      ],
+      "bilgiler": [
+        "Dünya rezervinin %72'si bizdedir, ihraç edilir",
+        "Isıya dayanıklıdır, birçok alanda kullanılır",
+        "Başka bir yerde çıkarılmaz (Güney Marmara)"
+      ]
+    },
+    {
+      "id": "mermer",
+      "ad": "Mermer",
+      "sahalar": [
+        {
+          "yer": "Afyonkarahisar",
+          "il": "Afyonkarahisar",
+          "not": "en çok",
+          "asil": true
+        },
+        {
+          "yer": "Marmara Adası",
+          "il": "Balıkesir",
+          "arama": "Marmara, Balıkesir",
+          "not": "en çok",
+          "asil": true
+        },
+        {
+          "yer": "Kırşehir",
+          "il": "Kırşehir"
+        },
+        {
+          "yer": "Elazığ",
+          "il": "Elazığ"
+        },
+        {
+          "yer": "Eskişehir",
+          "il": "Eskişehir"
+        },
+        {
+          "yer": "Bilecik",
+          "il": "Bilecik"
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Kireç taşının başkalaşım hâlidir (yüksek sıcaklık ve basınç)",
+        "Rezervi çok fazladır, ihraç edilir"
+      ]
+    },
+    {
+      "id": "fosfat",
+      "ad": "Fosfat",
+      "sahalar": [
+        {
+          "yer": "Mazıdağı",
+          "il": "Mardin",
+          "asil": true
+        },
+        {
+          "ad": "Aşağı Fırat Bölümü",
+          "yer": "Aşağı Fırat Bölümü",
+          "il": "Şanlıurfa",
+          "arama": "Şanlıurfa"
+        },
+        {
+          "yer": "Bingöl",
+          "il": "Bingöl"
+        },
+        {
+          "yer": "Bitlis",
+          "il": "Bitlis"
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Mazıdağı Fosfat Tesisi",
+          "yer": "Mazıdağı",
+          "il": "Mardin",
+          "neden": "hammadde"
+        },
+        {
+          "ad": "Mersin Fosfat Tesisi",
+          "yer": "Mersin",
+          "il": "Mersin",
+          "neden": "ulasim"
+        },
+        {
+          "ad": "İskenderun Fosfat Tesisi",
+          "yer": "İskenderun",
+          "il": "Hatay",
+          "neden": "ulasim"
+        },
+        {
+          "ad": "Samsun Fosfat Tesisi",
+          "yer": "Samsun",
+          "il": "Samsun",
+          "neden": "ulasim"
+        },
+        {
+          "ad": "İzmir Fosfat Tesisi",
+          "yer": "İzmir",
+          "il": "İzmir",
+          "neden": "ulasim"
+        },
+        {
+          "ad": "İzmit Fosfat Tesisi",
+          "yer": "İzmit",
+          "il": "Kocaeli",
+          "neden": "ulasim"
+        }
+      ],
+      "bilgiler": [
+        "Gübre yapımında kullanılır",
+        "Rezervi çok azdır, ithal edilir",
+        "Mardin Mazıdağı'nda hem çıkarılır hem işlenir",
+        "İthal edilen fosfatlar kıyı kesimlerdeki tesislerde işlenip yurt içine dağıtılır"
+      ]
+    },
+    {
+      "id": "bakir",
+      "ad": "Bakır",
+      "sahalar": [
+        {
+          "yer": "Küre",
+          "il": "Kastamonu",
+          "asil": true
+        },
+        {
+          "yer": "Murgul",
+          "il": "Artvin",
+          "asil": true
+        },
+        {
+          "yer": "Çayeli",
+          "il": "Rize",
+          "not": "Madenköy",
+          "asil": true
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Samsun Bakır İşletmesi",
+          "yer": "Samsun",
+          "il": "Samsun",
+          "neden": "ulasim"
+        },
+        {
+          "ad": "Maden Bakır İşletmesi",
+          "yer": "Maden",
+          "il": "Elazığ",
+          "neden": "hammadde"
+        },
+        {
+          "ad": "Murgul Bakır Fabrikası",
+          "yer": "Murgul",
+          "il": "Artvin",
+          "neden": "hammadde"
+        },
+        {
+          "ad": "Çayeli Bakır Fabrikası",
+          "yer": "Çayeli",
+          "il": "Rize",
+          "neden": "hammadde"
+        }
+      ],
+      "bilgiler": [
+        "Türkiye'nin en büyük bakır yatak bölgesi Karadeniz'dir",
+        "Elazığ (Maden) ve Diyarbakır (Ergani) bölgesinde de yataklar bulunur"
+      ]
+    },
+    {
+      "id": "boksit",
+      "ad": "Boksit (Alüminyum)",
+      "sahalar": [
+        {
+          "yer": "Akseki",
+          "il": "Antalya",
+          "asil": true
+        },
+        {
+          "yer": "Seydişehir",
+          "il": "Konya",
+          "asil": true
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Seydişehir Alüminyum Tesisi",
+          "yer": "Seydişehir",
+          "il": "Konya",
+          "neden": "hammadde"
+        }
+      ],
+      "bilgiler": [
+        "En çok Akdeniz Bölgesi'nde çıkarılır",
+        "Türkiye'nin tek alüminyum işleme tesisi Konya-Seydişehir'dedir",
+        "Zonguldak ve Payas'ta da az miktarda bulunur"
+      ]
+    },
+    {
+      "id": "demir",
+      "ad": "Demir",
+      "sahalar": [
+        {
+          "yer": "Divriği",
+          "il": "Sivas",
+          "asil": true
+        },
+        {
+          "yer": "Hekimhan",
+          "il": "Malatya",
+          "asil": true
+        },
+        {
+          "yer": "Hasançelebi",
+          "il": "Malatya",
+          "asil": true
+        },
+        {
+          "yer": "Kesikköprü",
+          "il": "Kırıkkale",
+          "arama": "Kırıkkale"
+        },
+        {
+          "ad": "Feke-Mansurlu Havzası",
+          "yer": "Feke-Mansurlu Havzası",
+          "il": "Adana",
+          "arama": "Mansurlu, Feke, Adana"
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Karabük Demir-Çelik Fabrikası",
+          "yer": "Karabük",
+          "il": "Karabük",
+          "neden": "enerji"
+        },
+        {
+          "ad": "Ereğli Demir-Çelik Fabrikası",
+          "yer": "Ereğli",
+          "il": "Zonguldak",
+          "arama": "Kdz. Ereğli, Zonguldak",
+          "neden": "enerji"
+        },
+        {
+          "ad": "İskenderun Demir-Çelik Fabrikası",
+          "yer": "İskenderun",
+          "il": "Hatay",
+          "neden": "ulasim"
+        }
+      ],
+      "bilgiler": [
+        "Türkiye'nin en büyük demir havzası Sivas ile Malatya arasındadır",
+        "Divriği, Hekimhan ve Hasançelebi bu alandaki en büyük ve önemli demir yataklarıdır",
+        "Karabük ve Ereğli demir-çelik fabrikalarının yer seçiminde enerji kaynağına (taş kömürü) yakınlık söz konusudur",
+        "İskenderun demir-çelik fabrikası ulaşım kolaylığı açısından avantajlıdır; ithal kömür getirilip demir işlenir, elde edilen çelik gemilerle ihraç edilir",
+        "Tüm demir-çelik fabrikaları suya yakın bölgede kurulmuştur; demirin eritilip soğutulmasında bolca su gerekir"
+      ]
+    },
+    {
+      "id": "krom",
+      "ad": "Krom",
+      "sahalar": [
+        {
+          "yer": "Guleman",
+          "il": "Elazığ",
+          "arama": "Alacakaya, Elazığ",
+          "asil": true
+        },
+        {
+          "yer": "Sivas",
+          "il": "Sivas"
+        },
+        {
+          "yer": "Erzincan",
+          "il": "Erzincan"
+        },
+        {
+          "yer": "Kop Dağı",
+          "il": "Bayburt",
+          "arama": "Bayburt",
+          "asil": true
+        },
+        {
+          "yer": "Köyceğiz",
+          "il": "Muğla",
+          "asil": true
+        },
+        {
+          "yer": "Fethiye",
+          "il": "Muğla",
+          "asil": true
+        },
+        {
+          "yer": "Pınarbaşı",
+          "il": "Kayseri"
+        },
+        {
+          "yer": "Eskişehir",
+          "il": "Eskişehir"
+        },
+        {
+          "yer": "Bursa",
+          "il": "Bursa"
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Elazığ Ferrokrom Tesisi",
+          "yer": "Elazığ",
+          "il": "Elazığ",
+          "neden": "hammadde"
+        },
+        {
+          "ad": "Antalya Ferrokrom Tesisi",
+          "yer": "Antalya",
+          "il": "Antalya",
+          "neden": "ulasim"
+        }
+      ],
+      "bilgiler": [
+        "Paslanmazlık ve aşınmazlık özelliği vardır",
+        "Rezervi çok fazladır, ihraç edilir",
+        "İşlendiği yerlerde ferro-krom elde edilir"
+      ]
+    },
+    {
+      "id": "barit",
+      "ad": "Barit",
+      "sahalar": [
+        {
+          "yer": "Alanya",
+          "il": "Antalya",
+          "asil": true
+        },
+        {
+          "yer": "Kahramanmaraş",
+          "il": "Kahramanmaraş",
+          "asil": true
+        },
+        {
+          "ad": "Eğirdir Gölü çevresi",
+          "yer": "Eğirdir",
+          "il": "Isparta"
+        },
+        {
+          "yer": "İzmit",
+          "il": "Kocaeli"
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Antalya Barit Tesisi",
+          "yer": "Antalya",
+          "il": "Antalya"
+        },
+        {
+          "ad": "Osmaniye Barit Tesisi",
+          "yer": "Osmaniye",
+          "il": "Osmaniye",
+          "neden": "hammadde"
+        }
+      ],
+      "bilgiler": [
+        "Petrol kuyularında basıncı artırır",
+        "Sondaj çalışmalarında bolca kullanılır, ürünün çıkması kolaylaştırılır",
+        "Rezervi fazladır, özellikle Orta Doğu'ya çok ihraç edilir"
+      ]
+    },
+    {
+      "id": "perlit",
+      "ad": "Perlit",
+      "sahalar": [
+        {
+          "yer": "İzmir",
+          "il": "İzmir",
+          "asil": true
+        },
+        {
+          "yer": "Ankara",
+          "il": "Ankara"
+        },
+        {
+          "yer": "Bayburt",
+          "il": "Bayburt"
+        },
+        {
+          "yer": "Erzurum",
+          "il": "Erzurum",
+          "asil": true
+        },
+        {
+          "yer": "Van",
+          "il": "Van"
+        },
+        {
+          "yer": "Bitlis",
+          "il": "Bitlis",
+          "asil": true
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Görünümünden dolayı 'inci taşı' adı verilir",
+        "Volkanik kökenli camsı bir madendir",
+        "Gıda, inşaat, boya, deterjan ve tarım gibi pek çok sektörde kullanılır"
+      ]
+    },
+    {
+      "id": "pomza",
+      "ad": "Pomza Taşı (Topuk Taşı)",
+      "sahalar": [
+        {
+          "yer": "Nevşehir",
+          "il": "Nevşehir",
+          "asil": true
+        },
+        {
+          "yer": "Kayseri",
+          "il": "Kayseri"
+        },
+        {
+          "yer": "Bitlis",
+          "il": "Bitlis",
+          "asil": true
+        },
+        {
+          "yer": "Van",
+          "il": "Van"
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Tarım ve inşaat sektöründe kullanılır (parke yapımında)",
+        "Volkanik kökenlidir"
+      ]
+    },
+    {
+      "id": "kukurt",
+      "ad": "Kükürt",
+      "sahalar": [
+        {
+          "yer": "Keçiborlu",
+          "il": "Isparta",
+          "not": "işletme kapatıldı",
+          "asil": true
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Bağcılıkta ve kayısıcılıkta kullanılan hastalık önleyici bir madendir",
+        "En önemli yatakları Isparta-Keçiborlu'dadır, buradaki işletme kapatılmıştır",
+        "Petrol yan ürünü olarak da üretilebilmektedir"
+      ]
+    },
+    {
+      "id": "manganez",
+      "ad": "Manganez",
+      "sahalar": [
+        {
+          "yer": "Ereğli",
+          "il": "Zonguldak",
+          "arama": "Kdz. Ereğli, Zonguldak",
+          "asil": true
+        },
+        {
+          "yer": "Denizli",
+          "il": "Denizli",
+          "asil": true
+        },
+        {
+          "yer": "Trabzon",
+          "il": "Trabzon"
+        },
+        {
+          "yer": "Rize",
+          "il": "Rize"
+        },
+        {
+          "yer": "Ardahan",
+          "il": "Ardahan"
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Çeliğe sertlik verir"
+      ]
+    },
+    {
+      "id": "oltutasi",
+      "ad": "Oltu Taşı",
+      "sahalar": [
+        {
+          "yer": "Oltu",
+          "il": "Erzurum",
+          "asil": true
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Dünyada sadece Erzurum'da bulunur",
+        "Süs eşyası yapımında kullanılır"
+      ]
+    },
+    {
+      "id": "luletasi",
+      "ad": "Lüle Taşı",
+      "sahalar": [
+        {
+          "yer": "Eskişehir",
+          "il": "Eskişehir",
+          "asil": true
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Süs eşyası yapımında kullanılır",
+        "En güzel yatakları Eskişehir'de bulunur"
+      ]
+    },
+    {
+      "id": "volfram",
+      "ad": "Volfram (Tungsten)",
+      "sahalar": [
+        {
+          "yer": "Uludağ",
+          "il": "Bursa",
+          "arama": "Uludağ, Bursa",
+          "asil": true
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Sert ve dayanıklı metal üretiminde alaşım olarak kullanılmaktadır"
+      ]
+    },
+    {
+      "id": "feldspat",
+      "ad": "Feldspat",
+      "sahalar": [
+        {
+          "yer": "Aydın",
+          "il": "Aydın",
+          "asil": true
+        },
+        {
+          "yer": "Kütahya",
+          "il": "Kütahya",
+          "asil": true
+        },
+        {
+          "yer": "Yozgat",
+          "il": "Yozgat"
+        },
+        {
+          "yer": "Kırşehir",
+          "il": "Kırşehir"
+        },
+        {
+          "yer": "Artvin",
+          "il": "Artvin"
+        },
+        {
+          "yer": "Ardahan",
+          "il": "Ardahan"
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Cam yapımında; seramik, boya, plastik ve kauçuk sanayisinde kullanılır",
+        "Bizde bolca rezervi ve yatağı bulunur",
+        "Feldspat üretiminde Türkiye dünya birincisidir",
+        "Dünyada en çok rezervi bulunan 5. ülkedir, bolca ihraç edilir"
+      ]
+    },
+    {
+      "id": "zimparatasi",
+      "ad": "Zımpara Taşı",
+      "sahalar": [
+        {
+          "yer": "Aydın",
+          "il": "Aydın",
+          "asil": true
+        },
+        {
+          "yer": "Alanya",
+          "il": "Antalya"
+        },
+        {
+          "yer": "Bodrum",
+          "il": "Muğla"
+        },
+        {
+          "yer": "Milas",
+          "il": "Muğla",
+          "asil": true
+        },
+        {
+          "yer": "Marmaris",
+          "il": "Muğla"
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Rezervi çoktur, ihraç edilir"
+      ]
+    },
+    {
+      "id": "asbest",
+      "ad": "Asbest (Amyant)",
+      "sahalar": [
+        {
+          "yer": "Balıkesir",
+          "il": "Balıkesir"
+        },
+        {
+          "yer": "Eskişehir",
+          "il": "Eskişehir",
+          "asil": true
+        },
+        {
+          "yer": "Sivas",
+          "il": "Sivas"
+        },
+        {
+          "yer": "Amasya",
+          "il": "Amasya"
+        },
+        {
+          "yer": "Hatay",
+          "il": "Hatay",
+          "asil": true
+        }
+      ],
+      "tesisler": [],
+      "bilgiler": [
+        "Yanmazlık özelliği olan madendir",
+        "Kanser yapan, yasaklı bir madendir"
+      ]
+    },
+    {
+      "id": "trona",
+      "ad": "Trona (Soda Külü)",
+      "sahalar": [
+        {
+          "yer": "Sincan",
+          "il": "Ankara"
+        },
+        {
+          "yer": "Kahramankazan",
+          "il": "Ankara"
+        },
+        {
+          "yer": "Beypazarı",
+          "il": "Ankara",
+          "asil": true
+        }
+      ],
+      "tesisler": [
+        {
+          "ad": "Kahramankazan Soda Külü Tesisi",
+          "yer": "Kahramankazan",
+          "il": "Ankara",
+          "neden": "hammadde"
+        }
+      ],
+      "bilgiler": [
+        "Şişe-cam yapımında kullanılır",
+        "Sadece Ankara'da çıkarılır ve işlenir"
+      ]
+    }
+  ]
+}

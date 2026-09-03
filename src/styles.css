@@ -16,6 +16,8 @@
   --warn:      #fbbf24;
   --card:      #303845;
   --card-hover:#39424f;
+  --isaret:      #f87171;
+  --isaret-kenar:#b45252;
   --shadow:    0 6px 18px rgba(0,0,0,0.35);
 }
 
@@ -902,4 +904,179 @@ button {
   .choices-compact .choice-title {
     font-size: 16px;
   }
+}
+
+/* ---------------- coğrafya: harita ---------------- */
+
+.harita-kutu {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px 6px;
+}
+
+.harita {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.harita-iller path {
+  fill: var(--bg-3);
+  stroke: #4b5464;
+  stroke-linejoin: round;
+}
+
+.harita-saha {
+  stroke: var(--bg);
+  paint-order: stroke;
+}
+
+.harita-tesis path {
+  stroke: var(--bg);
+  paint-order: stroke;
+}
+
+.harita-numara circle {
+  stroke: var(--bg);
+  paint-order: stroke;
+}
+.harita-numara text {
+  fill: #1b1f27;
+  font-weight: 800;
+  text-anchor: middle;
+  letter-spacing: 0.5px;
+}
+
+.harita-etiketler text {
+  fill: var(--text);
+  stroke: var(--bg);
+  paint-order: stroke;
+  stroke-linejoin: round;
+  font-weight: 600;
+}
+
+.harita-lejant {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  padding: 8px 2px 2px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+.lejant-oge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.lejant-nokta {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.lejant-kare {
+  width: 11px;
+  height: 9px;
+  border-radius: 2px;
+}
+
+/* ---------------- coğrafya: soru açıklaması ---------------- */
+
+.test-explain {
+  background: var(--bg-3);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
+/* ---------------- coğrafya: keşif ekranı ---------------- */
+
+.kesif-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.kesif-cip {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 13.5px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.kesif-cip:hover {
+  background: var(--bg-3);
+  color: var(--text);
+}
+.kesif-cip.aktif {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #16202e;
+  font-weight: 700;
+}
+
+.kesif-baslik {
+  margin: 4px 0 0;
+  font-size: 22px;
+}
+.kesif-not {
+  margin-left: 7px;
+  color: var(--isaret);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.kesif-bolum h3 {
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.kesif-etiketler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.kesif-etiket {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-size: 13.5px;
+}
+.kesif-etiket.tesis {
+  color: var(--text-dim);
+}
+
+.kesif-bilgiler {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+  color: var(--text);
+}
+.kesif-bilgiler li {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 600px) {
+  .harita-kutu { padding: 6px 6px 2px; }
+  .kesif-baslik { font-size: 19px; }
+  .test-explain { font-size: 13.5px; }
+}
+
+.harita-etiketler .etiket-cizgiler line {
+  stroke: var(--text-dim);
+}
+.harita-etiketler .etiket-cizgiler line.hale {
+  stroke: var(--bg);
 }

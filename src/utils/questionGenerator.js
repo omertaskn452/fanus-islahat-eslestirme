@@ -364,27 +364,35 @@ function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
       }
     }
   }
-  // Aynı grup içinde aynı tipteki diğer özellik değerleri
+  // Aynı grup içinde aynı tipteki diğer özellik değerleri.
+  // Kaynak varlığın türü de eşleşsin: bir hükümdar sorusuna "…devletidir"
+  // diye biten bir topluluk özelliği çeldirici olursa dilbilgisiyle elenir.
+  const hedefTur = turOf(grup, varlik)
   const primary = []
+  const primaryFarkliTur = []
   for (const v of grup.varliklar) {
     if (v.ad === varlik.ad) continue
+    const hedef = turOf(grup, v) === hedefTur ? primary : primaryFarkliTur
     for (const o of v.ozellikler) {
       if (o.tip === ozellik.tip && o.deger !== correct
-          && !pinned.includes(o.deger) && !primary.includes(o.deger)) {
-        primary.push(o.deger)
+          && !pinned.includes(o.deger)
+          && !primary.includes(o.deger) && !primaryFarkliTur.includes(o.deger)) {
+        hedef.push(o.deger)
       }
     }
   }
   // Fallback: aynı özellik tipinden değerler. Önce seçili gruplar, sonra
   // tüm gruplar (küçük gruplarda soru 2 şıkta kalmasın diye ünite sınırı aşılır).
-  const digerTipDegerleri = (gruplar, haric) => {
+  const digerTipDegerleri = (gruplar, haric, turEslesmeli) => {
     const out = []
     for (const g of gruplar) {
       if (g.id === grup.id) continue
       for (const v of g.varliklar) {
+        if (turEslesmeli && turOf(g, v) !== hedefTur) continue
         for (const o of v.ozellikler) {
           if (o.tip !== ozellik.tip || o.deger === correct) continue
           if (pinned.includes(o.deger) || primary.includes(o.deger)) continue
+          if (primaryFarkliTur.includes(o.deger)) continue
           if (haric.includes(o.deger) || out.includes(o.deger)) continue
           out.push(o.deger)
         }
@@ -392,10 +400,15 @@ function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
     }
     return out
   }
-  const secondary = digerTipDegerleri(sameCatGruplar, [])
-  const tertiary = digerTipDegerleri(allGruplar, secondary)
+  // Önce tür eşleşen havuzlar, sonra tür gözetmeyenler
+  const secondary = digerTipDegerleri(sameCatGruplar, [], true)
+  const tertiary = digerTipDegerleri(allGruplar, secondary, true)
+  const gevsek = digerTipDegerleri(allGruplar, [...secondary, ...tertiary], false)
 
-  return { correct, tiers: [pinned, primary, secondary, tertiary] }
+  return {
+    correct,
+    tiers: [pinned, primary, secondary, tertiary, primaryFarkliTur, gevsek],
+  }
 }
 
 // Ana fonksiyon: seçilen ünite + destede N soru üret

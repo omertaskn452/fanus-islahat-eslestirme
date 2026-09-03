@@ -184,6 +184,9 @@ function formatOzellikAd(grup, ozellik) {
     case 'ilk_musluman_ozel_bilgiler':
       return `${d}\n\nBu bilgi kime / hangisine aittir?`
 
+    case 'misir_turk_islam_devletleri':
+      return `${d}\n\nBu bilgi hangi Türk devleti veya topluluğuna aittir?`
+
     case 'anadolu_beylikleri_eserleri':
       // Her eser bir beyliğe ait; birden çok eser aynı beyliğe ait olduğu için
       // "hangi eser bu beyliğe aittir?" sorusu jeneratörde otomatik olarak
@@ -242,6 +245,7 @@ function formatAdOzellik(grup, varlik, ozellik) {
       return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
 
     case 'ilk_musluman_ozel_bilgiler':
+    case 'misir_turk_islam_devletleri':
       return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
     case 'anadolu_beylikleri_eserleri':

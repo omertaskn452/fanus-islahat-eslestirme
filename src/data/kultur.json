@@ -145,6 +145,9 @@
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "terimler",
       "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Camedar", "Candar"]
+      ],
       "varliklar": [
         {
           "ad": "Hares Emiri",
@@ -255,6 +258,9 @@
       "unite": "İlk Müslüman Türk Devletleri",
       "kategori": "terimler",
       "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Divan-ı İstifa", "Divan-ı İşraf"]
+      ],
       "varliklar": [
         {
           "ad": "Divan-ı İstifa",
@@ -320,6 +326,10 @@
       "unite": "Osmanlı Kültür ve Medeniyeti",
       "kategori": "terimler",
       "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Has", "Zeamet", "Tımar"],
+        ["Öşri", "Haraci"]
+      ],
       "varliklar": [
         {
           "ad": "Mülk Arazi",
@@ -427,7 +437,11 @@
       "kategori": "kisiler",
       "tip": "kisi",
       "birlikteSorulanlar": [
-        ["Akşemseddin", "Sabuncuoğlu Şerafettin"]
+        ["Akşemseddin", "Sabuncuoğlu Şerafettin"],
+        ["Piri Reis", "Seydi Ali Reis"],
+        ["Evliya Çelebi", "Kâtip Çelebi"],
+        ["Hezarfen Ahmet Çelebi", "Lagari Hasan Çelebi"],
+        ["Ali Kuşçu", "Takiyüddin Mehmet"]
       ],
       "varliklar": [
         {
@@ -670,6 +684,10 @@
       "unite": "Osmanlı Kültür ve Medeniyeti",
       "kategori": "terimler",
       "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Öşür", "Haraç", "Cizye"],
+        ["İmdadiye Seferiye", "İmdadiye Hazariye"]
+      ],
       "varliklar": [
         {
           "ad": "Öşür",
@@ -868,7 +886,7 @@
         {
           "ad": "Simon",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Çar unvanını kullanan ilk Türk hükümdardır (Tuna Bulgarları)" }
+            { "tip": "ozellik", "deger": "Çar unvanını kullanan ilk Türk hükümdardır" }
           ]
         },
         {
@@ -1054,6 +1072,34 @@
           "ad": "Satuk Buğra Han",
           "ozellikler": [
             { "tip": "ozellik", "deger": "Karahanlıların İslamiyeti kabul ettiği dönemin hükümdarıdır" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misir_turk_islam_devletleri",
+      "cevapTuru": "topluluk",
+      "ad": "Mısır'da Kurulan Türk-İslam Devletleri",
+      "unite": "İlk Müslüman Türk Devletleri",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "varliklar": [
+        {
+          "ad": "Tolunoğulları",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Mısır'da kurulan ilk Türk-İslam devletidir" }
+          ]
+        },
+        {
+          "ad": "İhşidiler (Akşitler)",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Hicaz bölgesine sahip olan ilk Türk-İslam devletidir" }
+          ]
+        },
+        {
+          "ad": "Memlükler",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Veraset sistemi diğer Türk devletlerinden farklıdır; hanedan dışından başarılı komutanlar da başa geçebilmiştir" }
           ]
         }
       ]

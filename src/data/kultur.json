@@ -932,70 +932,71 @@
       ]
     },
     {
-      "id": "islamiyet_oncesi_kavramlar",
-      "ad": "İslamiyet Öncesi — Devlet / Töre Unsurları ve Semboller",
+      "id": "islamiyet_oncesi_unsurlar",
+      "ad": "İslamiyet Öncesi — Devletin ve Törenin Unsurları",
       "unite": "İslamiyet Öncesi Türk Devletleri",
       "kategori": "terimler",
-      "tip": "terim",
+      "tip": "siniflandirma",
+      "soruOnEki": "İslamiyet öncesi Türk devletlerinde,",
       "varliklar": [
         {
-          "ad": "Oksızlık",
+          "ad": "Oksızlık (bağımsızlık)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Bağımsızlık (devletin dört unsurundan biri)" }
+            { "tip": "sinif", "deger": "devletin dört unsuru", "aciklama": "Devletin dört unsuru: oksızlık (bağımsızlık), ülke (vatan), kün (halk), teşkilat (örgütlenme)." }
           ]
         },
         {
-          "ad": "Ülke",
+          "ad": "Ülke (vatan)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Toprak / vatan (devletin dört unsurundan biri)" }
+            { "tip": "sinif", "deger": "devletin dört unsuru", "aciklama": "Devletin dört unsuru: oksızlık (bağımsızlık), ülke (vatan), kün (halk), teşkilat (örgütlenme)." }
           ]
         },
         {
-          "ad": "Kün",
+          "ad": "Kün (halk)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Halk (devletin dört unsurundan biri)" }
+            { "tip": "sinif", "deger": "devletin dört unsuru", "aciklama": "Devletin dört unsuru: oksızlık (bağımsızlık), ülke (vatan), kün (halk), teşkilat (örgütlenme)." }
           ]
         },
         {
-          "ad": "Teşkilat",
+          "ad": "Teşkilat (örgütlenme)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Örgütlenme (devletin dört unsurundan biri)" }
+            { "tip": "sinif", "deger": "devletin dört unsuru", "aciklama": "Devletin dört unsuru: oksızlık (bağımsızlık), ülke (vatan), kün (halk), teşkilat (örgütlenme)." }
           ]
         },
         {
-          "ad": "Könilik",
+          "ad": "Könilik (adalet)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Adalet (törenin değişmez dört kuralından biri)" }
+            { "tip": "sinif", "deger": "törenin değişmez dört kuralı", "aciklama": "Törenin değişmez dört kuralı: könilik (adalet), uzluk (iyilik), insanlık (kişilik), tüzlük (eşitlik)." }
           ]
         },
         {
-          "ad": "Uzluk",
+          "ad": "Uzluk (iyilik)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "İyilik (törenin değişmez dört kuralından biri)" }
+            { "tip": "sinif", "deger": "törenin değişmez dört kuralı", "aciklama": "Törenin değişmez dört kuralı: könilik (adalet), uzluk (iyilik), insanlık (kişilik), tüzlük (eşitlik)." }
           ]
         },
         {
-          "ad": "İnsanlık",
+          "ad": "İnsanlık (kişilik)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Kişilik (törenin değişmez dört kuralından biri)" }
+            { "tip": "sinif", "deger": "törenin değişmez dört kuralı", "aciklama": "Törenin değişmez dört kuralı: könilik (adalet), uzluk (iyilik), insanlık (kişilik), tüzlük (eşitlik)." }
           ]
         },
         {
-          "ad": "Tüzlük",
+          "ad": "Tüzlük (eşitlik)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Eşitlik (törenin değişmez dört kuralından biri)" }
+            { "tip": "sinif", "deger": "törenin değişmez dört kuralı", "aciklama": "Törenin değişmez dört kuralı: könilik (adalet), uzluk (iyilik), insanlık (kişilik), tüzlük (eşitlik)." }
           ]
         },
         {
-          "ad": "Örgin",
+          "ad": "Örgin (taht)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Taht (hükümdarlık sembollerinden biri)" }
+            { "tip": "sinif", "deger": "hükümdarlık sembolleri", "aciklama": "Örgin (taht) ve nevbet (davul) hükümdarlık/egemenlik sembollerindendir." }
           ]
         },
         {
-          "ad": "Nevbet",
+          "ad": "Nevbet (davul)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Davul (hükümdarlık sembollerinden biri)" }
+            { "tip": "sinif", "deger": "hükümdarlık sembolleri", "aciklama": "Örgin (taht) ve nevbet (davul) hükümdarlık/egemenlik sembollerindendir." }
           ]
         }
       ]

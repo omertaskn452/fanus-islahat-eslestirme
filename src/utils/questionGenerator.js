@@ -36,11 +36,58 @@ function collectVarlikAdlari(gruplar) {
   return s
 }
 
+// Sınıflandırma grubunda: sınıf değeri -> o sınıfa ait varlık adları
+function collectSiniflar(grup) {
+  const map = new Map()
+  for (const v of grup.varliklar) {
+    for (const o of v.ozellikler) {
+      if (o.tip !== 'sinif') continue
+      if (!map.has(o.deger)) map.set(o.deger, [])
+      map.get(o.deger).push(v.ad)
+    }
+  }
+  return map
+}
+
+// Sınıflandırma grubu için adaylar.
+// 'sinif-olan'    -> "Hangisi X arasında yer alır?"  doğru: X üyesi, çeldiriciler: X dışından
+// 'sinif-olmayan' -> "Hangisi X arasında yer almaz?" doğru: X dışından, çeldiriciler: X üyeleri
+function collectSiniflandirmaCandidates(grup) {
+  const cands = []
+  const siniflar = collectSiniflar(grup)
+
+  for (const varlik of grup.varliklar) {
+    const sinifOz = varlik.ozellikler.find(o => o.tip === 'sinif')
+    if (!sinifOz) continue
+    const kendiSinif = sinifOz.deger
+
+    // "hangisi X'tir?" -> diğer sınıflarda en az 3 çeldirici olmalı
+    const disUyeSayisi = [...siniflar.entries()]
+      .filter(([s]) => s !== kendiSinif)
+      .reduce((n, [, uyeler]) => n + uyeler.length, 0)
+    if (disUyeSayisi >= 3) {
+      cands.push({ grup, varlik, ozellik: sinifOz, yon: 'sinif-olan', sorulanSinif: kendiSinif })
+    }
+
+    // "hangisi Y değildir?" -> Y'nin en az 3 üyesi olmalı (3 çeldirici için)
+    for (const [sinif, uyeler] of siniflar) {
+      if (sinif === kendiSinif) continue
+      if (uyeler.length < 3) continue
+      cands.push({ grup, varlik, ozellik: sinifOz, yon: 'sinif-olmayan', sorulanSinif: sinif })
+    }
+  }
+  return cands
+}
+
 // Aday soru = { grup, varlik, ozellik, yon }
 // yon: 'ozellik-ad' (özellik verilir, ad sorulur) veya 'ad-ozellik' (ad verilir, özellik sorulur)
 function collectCandidates(gruplar) {
   const cands = []
   for (const grup of gruplar) {
+    if (grup.tip === 'siniflandirma') {
+      cands.push(...collectSiniflandirmaCandidates(grup))
+      continue
+    }
     for (const varlik of grup.varliklar) {
       for (const ozellik of varlik.ozellikler) {
         // ozellik -> ad: yalnızca bu (tip, deger) çifti grup içinde eşsizse güvenli.
@@ -63,6 +110,14 @@ function collectCandidates(gruplar) {
 // Soru metnini üret. Şablonlar gruba özel — Türkçe dilbilgisi ekleri sabit yazılır.
 function formatQuestion(cand) {
   const { grup, varlik, ozellik, yon } = cand
+
+  // Sınıflandırma soruları: şıklarda anlam/ipucu verilmez, sadece kavram adları listelenir.
+  if (yon === 'sinif-olan') {
+    return `${grup.soruOnEki} aşağıdakilerden hangisi ${cand.sorulanSinif} arasında yer alır?`
+  }
+  if (yon === 'sinif-olmayan') {
+    return `${grup.soruOnEki} aşağıdakilerden hangisi ${cand.sorulanSinif} arasında yer almaz?`
+  }
 
   if (yon === 'ozellik-ad') return formatOzellikAd(grup, ozellik)
   return formatAdOzellik(grup, varlik, ozellik)
@@ -121,10 +176,6 @@ function formatOzellikAd(grup, ozellik) {
     case 'islamiyet_oncesi_destanlar':
       if (ozellik.tip === 'topluluk') return `${d} topluluğuna ait destan aşağıdakilerden hangisidir?`
       return `${d}\n\nBu bilgi hangi destana aittir?`
-
-    case 'islamiyet_oncesi_kavramlar':
-      if (ozellik.tip === 'tanim') return `İslamiyet öncesi Türklerde "${d}" anlamına gelen kavram aşağıdakilerden hangisidir?`
-      return `${d}\n\nBu bilgi hangi kavrama aittir?`
 
     case 'ilk_musluman_kurucular':
       if (ozellik.tip === 'devlet') return `${d} devletinin kurucusu kimdir?`
@@ -186,10 +237,6 @@ function formatAdOzellik(grup, varlik, ozellik) {
       if (ozellik.tip === 'topluluk') return `${ad} hangi Türk topluluğuna aittir?`
       return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
 
-    case 'islamiyet_oncesi_kavramlar':
-      if (ozellik.tip === 'tanim') return `İslamiyet öncesi Türklerde "${ad}" kavramı ne anlama gelir?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
-
     case 'ilk_musluman_kurucular':
       if (ozellik.tip === 'devlet') return `${ad} hangi devletin kurucusudur?`
       return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
@@ -213,6 +260,26 @@ function formatAdOzellik(grup, varlik, ozellik) {
 // Doğru cevap ve çeldirici havuzu üret
 function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
   const { grup, varlik, ozellik, yon } = cand
+
+  // Sınıflandırma: doğru cevap da çeldiriciler de varlık adlarıdır.
+  if (yon === 'sinif-olan' || yon === 'sinif-olmayan') {
+    const correct = varlik.ad
+    const siniflar = collectSiniflar(grup)
+    const primary = []
+    if (yon === 'sinif-olan') {
+      // Çeldiriciler sorulan sınıfın DIŞINDAN gelir
+      for (const [sinif, uyeler] of siniflar) {
+        if (sinif === cand.sorulanSinif) continue
+        for (const u of uyeler) if (u !== correct) primary.push(u)
+      }
+    } else {
+      // Çeldiriciler sorulan sınıfın ÜYELERİDİR (doğru cevap o sınıfa ait değil)
+      for (const u of siniflar.get(cand.sorulanSinif) || []) {
+        if (u !== correct) primary.push(u)
+      }
+    }
+    return { correct, primary, secondary: [] }
+  }
 
   if (yon === 'ozellik-ad') {
     // Cevap = varlık adı

@@ -67,14 +67,12 @@ export default function KulturApp({ onBack }) {
 
   const [idx, setIdx] = useState(0)
   const [picked, setPicked] = useState(null)
-  const [reveals, setReveals] = useState({})
   const [answers, setAnswers] = useState({})
 
   function restart() {
     setSessionKey(k => k + 1)
     setIdx(0)
     setPicked(null)
-    setReveals({})
     setAnswers({})
   }
 
@@ -82,7 +80,6 @@ export default function KulturApp({ onBack }) {
     setKategori(null)
     setIdx(0)
     setPicked(null)
-    setReveals({})
     setAnswers({})
   }
 
@@ -91,7 +88,6 @@ export default function KulturApp({ onBack }) {
     setKategori(null)
     setIdx(0)
     setPicked(null)
-    setReveals({})
     setAnswers({})
   }
 
@@ -110,10 +106,6 @@ export default function KulturApp({ onBack }) {
     } else {
       setIdx(questions.length)
     }
-  }
-
-  function toggleReveal(qid) {
-    setReveals(prev => ({ ...prev, [qid]: !prev[qid] }))
   }
 
   const uniteInfo = unite === 'karma'
@@ -353,11 +345,6 @@ export default function KulturApp({ onBack }) {
         </div>
 
         <div className="test-actions">
-          {cevaplandı && q.aciklama && (
-            <button className="btn" onClick={() => toggleReveal(q.id)}>
-              {reveals[q.id] ? 'Açıklamayı gizle' : 'Açıklama'}
-            </button>
-          )}
           <button
             className="btn primary"
             onClick={nextQuestion}
@@ -366,10 +353,6 @@ export default function KulturApp({ onBack }) {
             {idx + 1 < questions.length ? 'Sonraki Soru' : 'Sonuçları Gör'}
           </button>
         </div>
-
-        {cevaplandı && reveals[q.id] && q.aciklama && (
-          <div className="test-explain">{q.aciklama}</div>
-        )}
       </div>
       </div>
     </div>

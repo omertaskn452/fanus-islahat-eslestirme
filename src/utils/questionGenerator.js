@@ -10,23 +10,16 @@ function shuffle(arr) {
   return a
 }
 
+// Soru kökünde bilgi cümlesi olarak kullanılan metin: sonunda noktalama yoksa
+// nokta eklenir, böylece "…mıştır\n\nYukarıdaki bilgi…" yerine düzgün cümle çıkar.
+function cumle(s) {
+  const t = String(s).trim()
+  return /[.!?…]$/.test(t) ? t : `${t}.`
+}
+
 // Bir grup içinde: aynı varlığın aynı tipte kaç özelliği var?
 function countOzellikByTip(varlik, tip) {
   return varlik.ozellikler.filter(o => o.tip === tip).length
-}
-
-// Bir gruptaki tüm özellik değerlerini tip bazında topla (çeldirici havuzu)
-function collectValuesByTip(gruplar) {
-  const map = new Map() // tip -> Set of degerler
-  for (const g of gruplar) {
-    for (const v of g.varliklar) {
-      for (const o of v.ozellikler) {
-        if (!map.has(o.tip)) map.set(o.tip, new Set())
-        map.get(o.tip).add(o.deger)
-      }
-    }
-  }
-  return map
 }
 
 // Gruptaki tüm varlık adlarını topla
@@ -123,141 +116,139 @@ function formatQuestion(cand) {
   return formatAdOzellik(grup, varlik, ozellik)
 }
 
+// Özellik verilir, varlığın adı sorulur.
 function formatOzellikAd(grup, ozellik) {
   const d = ozellik.deger
   switch (grup.id) {
     case 'turk_islam_bilim_insanlari':
-      if (ozellik.tip === 'unvan') return `"${d}" hangi bilim insanının unvanıdır?`
-      if (ozellik.tip === 'eser')  return `"${d}" adlı eseri hangi bilim insanı yazmıştır?`
-      return `${d}\n\nBu bilgi hangi bilim insanına aittir?`
+      if (ozellik.tip === 'unvan') return `"${d}" unvanı hangi bilim insanına aittir?`
+      if (ozellik.tip === 'eser')  return `"${d}" adlı eser hangi bilim insanı tarafından yazılmıştır?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen bilim insanı aşağıdakilerden hangisidir?`
 
     case 'osmanli_bilim_insanlari':
-      if (ozellik.tip === 'unvan') return `"${d}" hangi Osmanlı bilim insanının unvanıdır?`
-      if (ozellik.tip === 'eser')  return `"${d}" adlı eseri hangi Osmanlı bilim insanı yazmıştır?`
-      return `${d}\n\nBu bilgi hangi Osmanlı bilim insanına aittir?`
+      if (ozellik.tip === 'unvan') return `"${d}" unvanı hangi Osmanlı bilim insanına aittir?`
+      if (ozellik.tip === 'eser')  return `"${d}" adlı eser hangi Osmanlı bilim insanı tarafından yazılmıştır?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen Osmanlı bilim insanı aşağıdakilerden hangisidir?`
 
     case 'ilk_turk_islam_yazarlari':
-      if (ozellik.tip === 'eser')  return `"${d}" adlı eserin yazarı kimdir?`
-      return `${d}\n\nBu bilgi hangi yazara aittir?`
+      if (ozellik.tip === 'eser')  return `"${d}" adlı eserin yazarı aşağıdakilerden hangisidir?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen yazar aşağıdakilerden hangisidir?`
 
     case 'saray_gorevlileri':
-      if (ozellik.tip === 'gorev') return `${d}\n\nBu görevi yapan saray görevlisi kimdir?`
-      return `${d}\n\nBu bilgi hangi saray görevlisine aittir?`
+      if (ozellik.tip === 'gorev') return `${cumle(d)}\n\nYukarıda görevi belirtilen saray görevlisi aşağıdakilerden hangisidir?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen saray görevlisi aşağıdakilerden hangisidir?`
 
     case 'devlet_gorevlileri':
-      if (ozellik.tip === 'gorev') return `${d}\n\nBu görevi yapan devlet görevlisi kimdir?`
-      return `${d}\n\nBu bilgi hangi devlet görevlisine aittir?`
+      return `${cumle(d)}\n\nYukarıda tanıtılan devlet görevlisi aşağıdakilerden hangisidir?`
 
     case 'divanlar':
-      if (ozellik.tip === 'gorev')   return `${d}\n\nBu görevi yapan divan hangisidir?`
-      if (ozellik.tip === 'gorevli') return `"${d}" hangi divanın başındaki görevlidir?`
-      return `${d}\n\nBu bilgi hangi divana aittir?`
+      if (ozellik.tip === 'gorev')   return `${cumle(d)}\n\nYukarıda görevi belirtilen divan aşağıdakilerden hangisidir?`
+      if (ozellik.tip === 'gorevli') return `"${d}", hangi divanın başında bulunan görevlidir?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen divan aşağıdakilerden hangisidir?`
 
     case 'osmanli_toprak_yonetimi':
-      return `${d}\n\nBu tanıma uyan toprak çeşidi hangisidir?`
+      return `${cumle(d)}\n\nYukarıda tanımı verilen toprak çeşidi aşağıdakilerden hangisidir?`
 
     case 'osmanli_ekonomi_kavramlar':
-      return `${d}\n\nBu tanıma uyan kavram hangisidir?`
+      return `${cumle(d)}\n\nYukarıda tanımı verilen kavram aşağıdakilerden hangisidir?`
 
     case 'osmanli_vergiler':
-      return `${d}\n\nBu tanıma uyan vergi hangisidir?`
+      return `${cumle(d)}\n\nYukarıda tanımı verilen vergi aşağıdakilerden hangisidir?`
+
+    case 'islamiyet_oncesi_hukumdarlik_sembolleri':
+      return `${cumle(d)}\n\nYukarıda tanımı verilen hükümdarlık sembolü aşağıdakilerden hangisidir?`
 
     case 'islamiyet_oncesi_kurucular':
-      if (ozellik.tip === 'devlet') return `${d.replace(/\s*Devleti$/, '')} devletinin kurucusu kimdir?`
-      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+    case 'ilk_musluman_kurucular':
+      if (ozellik.tip === 'devlet') return `${d}, hangi hükümdar tarafından kurulmuştur?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen hükümdar aşağıdakilerden hangisidir?`
 
     case 'islamiyet_oncesi_hukumdarlar':
-      if (ozellik.tip === 'devlet') return `${d.replace(/\s*Devleti$/, '')} devleti en güçlü / en parlak dönemini hangi hükümdar zamanında yaşamıştır?`
-      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+      if (ozellik.tip === 'devlet') return `${d}, en parlak dönemini hangi hükümdar zamanında yaşamıştır?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen hükümdar aşağıdakilerden hangisidir?`
 
     case 'islamiyet_oncesi_ozel_bilgiler':
-      return `${d}\n\nBu bilgi kime / hangisine aittir?`
+    case 'ilk_musluman_ozel_bilgiler':
+      return `${cumle(d)}\n\nYukarıda verilen bilgi aşağıdakilerden hangisine aittir?`
 
     case 'islamiyet_oncesi_destanlar':
       if (ozellik.tip === 'topluluk') return `${d} topluluğuna ait destan aşağıdakilerden hangisidir?`
-      return `${d}\n\nBu bilgi hangi destana aittir?`
-
-    case 'ilk_musluman_kurucular':
-      if (ozellik.tip === 'devlet') return `${d} devletinin kurucusu kimdir?`
-      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
-
-    case 'ilk_musluman_ozel_bilgiler':
-      return `${d}\n\nBu bilgi kime / hangisine aittir?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen destan aşağıdakilerden hangisidir?`
 
     case 'misir_turk_islam_devletleri':
-      return `${d}\n\nBu bilgi hangi Türk devleti veya topluluğuna aittir?`
+      return `${cumle(d)}\n\nYukarıda verilen bilgi, aşağıdaki Türk-İslam devletlerinden hangisine aittir?`
 
     case 'anadolu_beylikleri_eserleri':
       // Her eser bir beyliğe ait; birden çok eser aynı beyliğe ait olduğu için
       // "hangi eser bu beyliğe aittir?" sorusu jeneratörde otomatik olarak
       // atlanır (değer benzersizlik kontrolü). Şablon güvenlik için burada.
-      return `${d} beyliğine ait eser aşağıdakilerden hangisidir?`
+      return `${d} Beyliği'nden günümüze kalan eser aşağıdakilerden hangisidir?`
 
     case 'anadolu_selcuklu_olaylar':
-      if (ozellik.tip === 'hukumdar') return `${d} döneminde yaşanan olaylardan biri aşağıdakilerden hangisidir?`
-      return `${d}\n\nBu bilgi hangi hükümdara aittir?`
+      if (ozellik.tip === 'hukumdar') return `${d} döneminde yaşanan gelişmelerden biri aşağıdakilerden hangisidir?`
+      return `${cumle(d)}\n\nYukarıda verilen bilgi hangi hükümdara aittir?`
 
     default:
-      return `${d}\n\nBu bilgi kime aittir?`
+      return `${cumle(d)}\n\nYukarıda verilen bilgi aşağıdakilerden hangisine aittir?`
   }
 }
 
+// Varlığın adı verilir, özelliği sorulur.
 function formatAdOzellik(grup, varlik, ozellik) {
   const ad = varlik.ad
   switch (grup.id) {
     case 'saray_gorevlileri':
-      return `${ad} adlı saray görevlisi ne iş yapmıştır?`
-
-    case 'devlet_gorevlileri':
-      return `${ad} adlı devlet görevlisi ne iş yapmıştır?`
-
-    case 'divanlar':
-      if (ozellik.tip === 'gorev')   return `${ad} adlı divanın görevi nedir?`
-      if (ozellik.tip === 'gorevli') return `${ad} adlı divanın başındaki görevli kimdir?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
-
-    case 'osmanli_toprak_yonetimi':
-      return `${ad} adlı toprak çeşidinin tanımı nedir?`
-
-    case 'osmanli_ekonomi_kavramlar':
-      return `${ad} adlı kavram ne anlama gelir?`
-
-    case 'osmanli_vergiler':
-      return `${ad} adlı vergi ne anlama gelir?`
-
-    case 'islamiyet_oncesi_kurucular':
-      if (ozellik.tip === 'devlet') return `${ad} hangi devletin kurucusudur?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
-
-    case 'islamiyet_oncesi_hukumdarlar':
-      if (ozellik.tip === 'devlet') return `${ad} hangi devletin en güçlü / en parlak dönem hükümdarıdır?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
-
-    case 'islamiyet_oncesi_ozel_bilgiler':
+      if (ozellik.tip === 'gorev') return `Saray teşkilatında ${ad}, hangi görevi yerine getirmiştir?`
       return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
-    case 'islamiyet_oncesi_destanlar':
-      if (ozellik.tip === 'topluluk') return `${ad} hangi Türk topluluğuna aittir?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+    case 'devlet_gorevlileri':
+      return `İlk Müslüman Türk devletlerinde ${ad} ne anlama gelmektedir?`
 
+    case 'divanlar':
+      if (ozellik.tip === 'gorev')   return `${ad} adlı divan hangi işlerden sorumlu olmuştur?`
+      if (ozellik.tip === 'gorevli') return `${ad} adlı divanın başında bulunan görevli aşağıdakilerden hangisidir?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
+    case 'osmanli_toprak_yonetimi':
+      return `Osmanlı toprak sisteminde ${ad} ne anlama gelmektedir?`
+
+    case 'osmanli_ekonomi_kavramlar':
+      return `Osmanlı ekonomisinde ${ad} ne anlama gelmektedir?`
+
+    case 'osmanli_vergiler':
+      return `Osmanlı Devleti'nde ${ad} ne anlama gelmektedir?`
+
+    case 'islamiyet_oncesi_hukumdarlik_sembolleri':
+      return `İslamiyet öncesi Türk devletlerinde ${ad} ne anlama gelmektedir?`
+
+    case 'islamiyet_oncesi_kurucular':
     case 'ilk_musluman_kurucular':
-      if (ozellik.tip === 'devlet') return `${ad} hangi devletin kurucusudur?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+      if (ozellik.tip === 'devlet') return `${ad}, aşağıdaki Türk devletlerinden hangisinin kurucusudur?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
+    case 'islamiyet_oncesi_hukumdarlar':
+      if (ozellik.tip === 'devlet') return `${ad}, aşağıdakilerden hangisinin en parlak dönem hükümdarıdır?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
+    case 'islamiyet_oncesi_ozel_bilgiler':
     case 'ilk_musluman_ozel_bilgiler':
     case 'misir_turk_islam_devletleri':
       return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
+    case 'islamiyet_oncesi_destanlar':
+      if (ozellik.tip === 'topluluk') return `${ad}, hangi Türk topluluğuna aittir?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
     case 'anadolu_beylikleri_eserleri':
-      if (ozellik.tip === 'beylik') return `${ad} hangi Anadolu beyliğine aittir?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+      if (ozellik.tip === 'beylik') return `${ad} hangi Anadolu beyliğinden günümüze kalmıştır?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
     case 'anadolu_selcuklu_olaylar':
-      if (ozellik.tip === 'hukumdar') return `${ad}\n\nBu olay hangi Anadolu Selçuklu hükümdarı döneminde yaşanmıştır?`
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+      if (ozellik.tip === 'hukumdar') return `${cumle(ad)}\n\nYukarıda verilen gelişme, hangi Anadolu Selçuklu hükümdarı döneminde yaşanmıştır?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
     default:
-      return `${ad} hakkında aşağıdakilerden hangisi doğrudur?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
   }
 }
 
@@ -272,6 +263,28 @@ function partnersOf(grup, varlikAd) {
     for (const ad of set) if (ad !== varlikAd) out.push(ad)
   }
   return out
+}
+
+// Grup sınırı tanımayan eşler (kultur.json kökündeki "birlikteGelenler").
+// Hem varlık adları hem de özellik değerleri için çalışır: ör. "I. Göktürk
+// Devleti" cevabı hangi grupta çıkarsa çıksın "II. Göktürk (Kutluk) Devleti"
+// de şıklara girer.
+function globalPartnersOf(setler, deger) {
+  const out = []
+  for (const set of setler || []) {
+    if (!set.includes(deger)) continue
+    for (const x of set) if (x !== deger && !out.includes(x)) out.push(x)
+  }
+  return out
+}
+
+// Bir özellik tipinin tüm gruplardaki geçerli değerleri (global eşleri doğrulamak için)
+function valuesOfTip(gruplar, tip) {
+  const s = new Set()
+  for (const g of gruplar) for (const v of g.varliklar) {
+    for (const o of v.ozellikler) if (o.tip === tip) s.add(o.deger)
+  }
+  return s
 }
 
 // Bir varlığın cevap türü: varlık kendi 'tur' alanıyla grubu ezebilir.
@@ -290,10 +303,11 @@ function turOf(grup, varlik) {
 //   6) son çare: seçili gruplardan herhangi bir ad
 // Tür uyumu grup yakınlığından önce gelir: bir seyyah sorusuna hükümdar
 // çeldirici koymaktansa başka gruptaki bilim insanlarını kullanmak daha iyi.
-function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
+function buildAnswerAndPool(cand, allGruplar, sameCatGruplar, birlikteGelenler) {
   const { grup, varlik, ozellik, yon } = cand
 
   // Sınıflandırma: doğru cevap da çeldiriciler de varlık adlarıdır.
+  // Havuz yalnızca bu grubun sınıflarından gelir; başka konular karışmaz.
   if (yon === 'sinif-olan' || yon === 'sinif-olmayan') {
     const correct = varlik.ad
     const siniflar = collectSiniflar(grup)
@@ -317,7 +331,13 @@ function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
     // Cevap = varlık adı
     const correct = varlik.ad
     const hedefTur = turOf(grup, varlik)
-    const pinned = partnersOf(grup, correct)
+
+    // Karıştırılan eşler: grup içi liste + kök seviyedeki global liste
+    const gecerliAdlar = collectVarlikAdlari(allGruplar)
+    const pinned = [...partnersOf(grup, correct)]
+    for (const ad of globalPartnersOf(birlikteGelenler, correct)) {
+      if (gecerliAdlar.has(ad) && ad !== correct && !pinned.includes(ad)) pinned.push(ad)
+    }
 
     // Aynı grup: önce aynı tür, sonra farklı tür
     const ayniGrupAyniTur = []
@@ -368,6 +388,12 @@ function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
       }
     }
   }
+  // Global eşler: doğru cevabın kendisi bir değerse (ör. "I. Göktürk Devleti"),
+  // eşi de aynı tipte gerçekten var olduğu sürece şıklara sabitlenir.
+  const gecerliDegerler = valuesOfTip(allGruplar, ozellik.tip)
+  for (const dg of globalPartnersOf(birlikteGelenler, correct)) {
+    if (gecerliDegerler.has(dg) && dg !== correct && !pinned.includes(dg)) pinned.push(dg)
+  }
   // Aynı grup içinde aynı tipteki diğer özellik değerleri.
   // Kaynak varlığın türü de eşleşsin: bir hükümdar sorusuna "…devletidir"
   // diye biten bir topluluk özelliği çeldirici olursa dilbilgisiyle elenir.
@@ -415,8 +441,32 @@ function buildAnswerAndPool(cand, allGruplar, sameCatGruplar) {
   }
 }
 
+// Bir adayın "aynı bilgiyi ölçen" kardeşlerinden ayırt edilmesini sağlayan anahtar.
+// Sınıflandırma gruplarında anahtar SINIF'tır: "devletin dört unsuru"ndan da
+// "törenin dört kuralı"ndan da tek soru çıkar. (Aksi hâlde aynı listeden
+// 4-5 soru üretilip neredeyse bütün şıklar tek tek cevap oluyordu.)
+function dedupeKey(cand) {
+  if (cand.yon === 'sinif-olan' || cand.yon === 'sinif-olmayan') {
+    return `${cand.grup.id}::sinif::${cand.sorulanSinif}`
+  }
+  return `${cand.grup.id}::${cand.varlik.ad}`
+}
+
+// "hangisi X değildir?" sorusunda açıklama, doğru cevabın değil sorulan
+// sınıfın açıklaması olmalı.
+function aciklamaOf(cand) {
+  if (cand.yon === 'sinif-olmayan') {
+    for (const v of cand.grup.varliklar) {
+      for (const o of v.ozellikler) {
+        if (o.tip === 'sinif' && o.deger === cand.sorulanSinif && o.aciklama) return o.aciklama
+      }
+    }
+  }
+  return cand.ozellik.aciklama || null
+}
+
 // Ana fonksiyon: seçilen ünite + destede N soru üret
-export function generateQuestions(allGruplar, unite, kategori, count) {
+export function generateQuestions(allGruplar, unite, kategori, count, birlikteGelenler = []) {
   // unite: 'karma' | ünite tam adı
   // kategori: 'kisiler' | 'terimler' | 'karma'
   let selectedGruplar = allGruplar
@@ -438,7 +488,7 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
   const uniqueByVarlik = []
   const seenVarlik = new Set()
   for (const c of shuffled) {
-    const key = `${c.grup.id}::${c.varlik.ad}`
+    const key = dedupeKey(c)
     if (seenVarlik.has(key)) continue
     seenVarlik.add(key)
     uniqueByVarlik.push(c)
@@ -454,6 +504,7 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
       cand,
       allGruplar,
       selectedGruplar,
+      birlikteGelenler,
     )
     // 3 çeldiriciyi katman sırasına göre topla: üst katman tükenmeden alta inilmez.
     const distractors = []
@@ -462,6 +513,20 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
       const uygun = shuffle(tier.filter(x => x !== correct && !distractors.includes(x)))
       distractors.push(...uygun.slice(0, 3 - distractors.length))
     }
+    // Kök listedeki eşler şıklarda hep birlikte görünsün. Yukarıdaki "pinned"
+    // katmanı yalnızca DOĞRU CEVABIN eşini garanti eder; burada eşlerden biri
+    // çeldirici olarak girdiyse diğerini de içeri alıyoruz. Yer açmak için
+    // eş listesinde adı geçmeyen serbest bir çeldirici feda edilir.
+    const havuzSet = new Set(tiers.flat())
+    for (const opt of [correct, ...distractors]) {
+      for (const es of globalPartnersOf(birlikteGelenler, opt)) {
+        if (es === correct || distractors.includes(es) || !havuzSet.has(es)) continue
+        const yeri = distractors.findIndex(x => globalPartnersOf(birlikteGelenler, x).length === 0)
+        if (yeri === -1) continue
+        distractors[yeri] = es
+      }
+    }
+
     // Havuz yine yetmiyorsa (küçük grup), soruyu yine de üretiriz ama 2-3 şık olur.
     const secenekler = shuffle([correct, ...distractors])
 
@@ -470,7 +535,7 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
       soru: formatQuestion(cand),
       dogru: correct,
       secenekler,
-      aciklama: cand.ozellik.aciklama || null,
+      aciklama: aciklamaOf(cand),
       grupAd: cand.grup.ad,
       varlikAd: cand.varlik.ad,
       ozellikTip: cand.ozellik.tip,
@@ -479,4 +544,15 @@ export function generateQuestions(allGruplar, unite, kategori, count) {
   }
 
   return questions
+}
+
+// Ekranlardaki "N olası soru" sayacı: üretilen soru sayısıyla aynı kuralı kullanır.
+export function countPossibleQuestions(allGruplar, unite, kategori) {
+  let filt = allGruplar
+  if (unite && unite !== 'karma') filt = filt.filter(g => g.unite === unite)
+  if (kategori && kategori !== 'karma') filt = filt.filter(g => g.kategori === kategori)
+
+  const keys = new Set()
+  for (const c of collectCandidates(filt)) keys.add(dedupeKey(c))
+  return keys.size
 }

@@ -1,4 +1,8 @@
 {
+  "birlikteGelenler": [
+    ["I. Göktürk Devleti", "II. Göktürk (Kutluk) Devleti"],
+    ["Bumin Kağan", "Kutluk Kağan"]
+  ],
   "gruplar": [
     {
       "id": "turk_islam_bilim_insanlari",
@@ -14,17 +18,17 @@
             { "tip": "unvan", "deger": "Muallim-i Sani (İkinci Öğretmen)" },
             { "tip": "unvan", "deger": "Alpharabius" },
             { "tip": "unvan", "deger": "Abunazar" },
-            { "tip": "eser", "deger": "Kitabul Musiki", "aciklama": "Dünya tarihinin ilk modern müzik kitabıdır." },
-            { "tip": "ozellik", "deger": "Birleşmiş Milletler fikrini ilk ortaya atan kişidir" }
+            { "tip": "eser", "deger": "Kitabu'l Musiki", "aciklama": "Müzik teorisi üzerine yazılmış en kapsamlı ilk eserlerdendir." },
+            { "tip": "ozellik", "deger": "El-Medinetü'l Fazıla adlı eserinde, günümüzdeki Birleşmiş Milletler fikrine benzer bir düzen tasarlamıştır" }
           ]
         },
         {
           "ad": "Gazali",
           "ozellikler": [
-            { "tip": "eser", "deger": "İhyaül Ulumiddin", "aciklama": "Anlamı: Dini ilimlerin ihyası." },
+            { "tip": "eser", "deger": "İhyaü Ulumiddin", "aciklama": "Adının anlamı 'dinî ilimlerin diriltilmesi'dir." },
             { "tip": "eser", "deger": "Cevahirül Kur'an" },
             { "tip": "eser", "deger": "Kimya-yı Saadet" },
-            { "tip": "ozellik", "deger": "Bağdat Nizamiye Medresesi'nin rektörlüğünü yapmıştır" }
+            { "tip": "ozellik", "deger": "Bağdat Nizamiye Medresesi'nin başmüderrisliğini yapmıştır" }
           ]
         },
         {
@@ -33,10 +37,10 @@
             { "tip": "unvan", "deger": "El-Üstad" },
             { "tip": "unvan", "deger": "Alberuni" },
             { "tip": "unvan", "deger": "Aliboron" },
-            { "tip": "eser", "deger": "Asarül Bakiye", "aciklama": "Asyalı milletlerin tarihini, kullandıkları takvimleri, dini gün ve bayramlarını anlatır." },
-            { "tip": "eser", "deger": "Kitabüs Saydeletif Tıp", "aciklama": "Eczacılık alanında yazılmış eserdir." },
-            { "tip": "ozellik", "deger": "Yer çekiminin varlığını Newton'dan önce söylemiştir" },
-            { "tip": "ozellik", "deger": "Gazneli Mahmut kendisi için 'Sarayımın en kıymetli hazinesi' demiştir" }
+            { "tip": "eser", "deger": "Asarül Bakiye", "aciklama": "Asya milletlerinin tarihini, kullandıkları takvimleri ve dinî gün ile bayramlarını anlatır." },
+            { "tip": "eser", "deger": "Kitabü's Saydele fi't Tıb", "aciklama": "Eczacılık alanında yazılmış bir eserdir." },
+            { "tip": "ozellik", "deger": "Yer çekiminin varlığından Newton'dan yüzyıllar önce söz etmiştir" },
+            { "tip": "ozellik", "deger": "Gazneli Mahmut'un 'Sarayımın en kıymetli hazinesi' sözüyle övdüğü bilim insanıdır" }
           ]
         },
         {
@@ -49,9 +53,9 @@
             { "tip": "unvan", "deger": "Şeyhülfelasife" },
             { "tip": "eser", "deger": "El-Kanun Fit Tıbb" },
             { "tip": "eser", "deger": "Kitabüş Şifa" },
-            { "tip": "ozellik", "deger": "Mikrobun tanımını yapan ilk kişidir" },
-            { "tip": "ozellik", "deger": "Ay'da bir kratere ismi verilmiştir" },
-            { "tip": "ozellik", "deger": "Azimut Halkası adlı bir gözlem aleti yapmıştır" }
+            { "tip": "ozellik", "deger": "Hastalıklara gözle görülemeyen canlıların yol açtığını ileri sürerek mikrobun tanımını yapmıştır" },
+            { "tip": "ozellik", "deger": "Ay'daki bir kratere adı verilmiştir" },
+            { "tip": "ozellik", "deger": "Azimut Halkası adlı gözlem aletini geliştirmiştir" }
           ]
         },
         {
@@ -64,28 +68,28 @@
           "ad": "Cabir bin Hayyan",
           "ozellikler": [
             { "tip": "eser", "deger": "Kitabul Kimya" },
-            { "tip": "ozellik", "deger": "Modern kimyanın kurucusudur" }
+            { "tip": "ozellik", "deger": "Deneysel yöntemleriyle modern kimyanın kurucusu sayılmıştır" }
           ]
         },
         {
           "ad": "Harezmi",
           "ozellikler": [
             { "tip": "eser", "deger": "Hisabül Cebr Vel Mukabele" },
-            { "tip": "ozellik", "deger": "Cebrin kurucusudur" }
+            { "tip": "ozellik", "deger": "Cebir biliminin kurucusu kabul edilmiştir" }
           ]
         },
         {
           "ad": "İbni Rüşt",
           "ozellikler": [
             { "tip": "unvan", "deger": "Averroes" },
-            { "tip": "ozellik", "deger": "'Zamanın Volter'i' olarak adlandırılmıştır" }
+            { "tip": "ozellik", "deger": "Akılcı görüşleri nedeniyle 'Zamanının Voltaire'i' olarak anılmıştır" }
           ]
         },
         {
           "ad": "İbni Heysem",
           "ozellikler": [
-            { "tip": "eser", "deger": "Kitabül Menazir", "aciklama": "Anlamı: Görme Kitabı." },
-            { "tip": "ozellik", "deger": "Fotoğraf makinesinin mucididir" }
+            { "tip": "eser", "deger": "Kitabül Menazir", "aciklama": "Adının anlamı 'Optik (Görme) Kitabı'dır." },
+            { "tip": "ozellik", "deger": "Fotoğraf makinesinin ilk hâli sayılan karanlık odayı (camera obscura) bulmuştur" }
           ]
         }
       ]
@@ -104,14 +108,14 @@
             { "tip": "eser", "deger": "Kutadgu Bilig" },
             { "tip": "ozellik", "deger": "'Mutluluk veren bilgi' anlamına gelen eserin yazarıdır" },
             { "tip": "ozellik", "deger": "İlk yazılı Türk-İslam eserinin yazarıdır" },
-            { "tip": "ozellik", "deger": "Eseri adalet, devlet, akıl ve kanaat (akıbet) olmak üzere dört temel üzerine yazılmıştır" }
+            { "tip": "ozellik", "deger": "Eserini adalet, saadet (devlet), akıl ve akıbet (kanaat) olmak üzere dört temel kavram üzerine kurmuştur" }
           ]
         },
         {
           "ad": "Kaşgarlı Mahmut",
           "ozellikler": [
             { "tip": "eser", "deger": "Divanu Lügati't-Türk" },
-            { "tip": "ozellik", "deger": "Eserini Araplara Türk dilini öğretmek, Türk milletinin yüceliğini ve Türkçenin zengin bir dil olduğunu göstermek amacıyla yazmıştır" }
+            { "tip": "ozellik", "deger": "Eserini, Araplara Türkçeyi öğretmek ve Türkçenin Arapça kadar zengin bir dil olduğunu göstermek amacıyla yazmıştır" }
           ]
         },
         {
@@ -125,7 +129,7 @@
           "ad": "Ahmet Yesevi",
           "ozellikler": [
             { "tip": "eser", "deger": "Divan-ı Hikmet" },
-            { "tip": "ozellik", "deger": "Türk tasavvuf tarihinin ilk edebi eserinin yazarıdır" },
+            { "tip": "ozellik", "deger": "Türk tasavvuf edebiyatının ilk örneği sayılan eserin yazarıdır" },
             { "tip": "ozellik", "deger": "İlk Türk mutasavvıfıdır" }
           ]
         },
@@ -133,7 +137,7 @@
           "ad": "Firdevsi",
           "ozellikler": [
             { "tip": "eser", "deger": "Şehname" },
-            { "tip": "ozellik", "deger": "Eserinde Alper Tunga'yı Afrasiyap olarak anlatmıştır" }
+            { "tip": "ozellik", "deger": "Şehname adlı eserinde Alper Tunga'dan Afrasiyab adıyla söz etmiştir" }
           ]
         }
       ]
@@ -152,43 +156,43 @@
         {
           "ad": "Hares Emiri",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Hükümdara karşı suç işleyenleri cezalandırmıştır" }
+            { "tip": "gorev", "deger": "Hükümdara karşı suç işleyenlerin cezalandırılmasından sorumlu olmuştur" }
           ]
         },
         {
           "ad": "Candar",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Padişahı korumuştur" }
+            { "tip": "gorev", "deger": "Hükümdarın can güvenliğini sağlamıştır" }
           ]
         },
         {
           "ad": "Alemdar",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Devlet bayrağını taşımıştır" }
+            { "tip": "gorev", "deger": "Devlet bayrağını taşımakla görevlendirilmiştir" }
           ]
         },
         {
           "ad": "Silahdar",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Hükümdarın silahları ile ilgilenmiştir" }
+            { "tip": "gorev", "deger": "Hükümdarın silahlarının bakımından ve korunmasından sorumlu olmuştur" }
           ]
         },
         {
           "ad": "Camedar",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Hükümdarın kıyafetleriyle ilgilenmiştir" }
+            { "tip": "gorev", "deger": "Hükümdarın kıyafetlerinden sorumlu olmuştur" }
           ]
         },
         {
           "ad": "Çaşnigir",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Padişahın yiyecekleriyle ilgilenmiştir" }
+            { "tip": "gorev", "deger": "Hükümdarın sofrasından ve yiyeceklerinden sorumlu olmuştur" }
           ]
         },
         {
           "ad": "Hacip",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Hükümdar ve vezirden sonraki en yetkili kişidir" }
+            { "tip": "gorev", "deger": "Hükümdar ve vezirden sonra gelen en yetkili kişi olarak sarayı yönetmiştir" }
           ]
         }
       ]
@@ -204,49 +208,49 @@
         {
           "ad": "Amid",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Sivil yöneticidir" }
+            { "tip": "gorev", "deger": "Şehirlerin sivil yönetiminden sorumlu olan görevlidir" }
           ]
         },
         {
           "ad": "Amil (Imga)",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Vergi toplayan görevlidir" }
+            { "tip": "gorev", "deger": "Vergilerin toplanmasından sorumlu olan görevlidir" }
           ]
         },
         {
           "ad": "Yuğruş",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Karahanlılarda vezire verilen addır" }
+            { "tip": "gorev", "deger": "Karahanlılarda vezirlik makamına verilen addır" }
           ]
         },
         {
           "ad": "Hace",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Gaznelilerde vezire verilen addır" }
+            { "tip": "gorev", "deger": "Gaznelilerde vezirlik makamına verilen addır" }
           ]
         },
         {
           "ad": "Melik",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Hükümdarın oğludur" }
+            { "tip": "gorev", "deger": "Hükümdarın oğullarına verilen unvandır" }
           ]
         },
         {
           "ad": "Atabey",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Melik eğitmenidir" }
+            { "tip": "gorev", "deger": "Meliklerin eğitiminden sorumlu olan devlet adamıdır" }
           ]
         },
         {
           "ad": "Şıhne",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Askeri validir" }
+            { "tip": "gorev", "deger": "Askerî valilik görevini yürüten kişidir" }
           ]
         },
         {
           "ad": "Muhtesip",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Belediye işlerinden sorumludur (çarşı ve pazarı denetleyen görevli)" }
+            { "tip": "gorev", "deger": "Çarşı ve pazarları denetleyen, bugünkü belediye işlerine bakan görevlidir" }
           ]
         }
       ]
@@ -265,42 +269,42 @@
         {
           "ad": "Divan-ı İstifa",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Ekonomi ile ilgilenmiştir" },
+            { "tip": "gorev", "deger": "Devletin mali işlerinden ve bütçesinden sorumlu olmuştur" },
             { "tip": "gorevli", "deger": "Müstevfi" }
           ]
         },
         {
           "ad": "Divan-ı Arz (Ceyşül Arz)",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Askerlik ile ilgilenmiştir" },
+            { "tip": "gorev", "deger": "Ordunun ihtiyaçları ve askerî işlerden sorumlu olmuştur" },
             { "tip": "gorevli", "deger": "Emir-i Arz" }
           ]
         },
         {
           "ad": "Divan-ı İşraf",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Ülkeyi denetlemiştir" },
+            { "tip": "gorev", "deger": "Devlet dairelerini ve görevlilerini denetlemiştir" },
             { "tip": "gorevli", "deger": "Müşrif-i Memalik" }
           ]
         },
         {
           "ad": "Divan-ı İnşa (Tuğra)",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Yazışma işleri ile ilgilenmiştir" },
+            { "tip": "gorev", "deger": "Devletin iç ve dış yazışmalarını yürütmüştür" },
             { "tip": "gorevli", "deger": "Tuğrai" }
           ]
         },
         {
           "ad": "Divan-ı Berid",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Haberleşme ve posta işlerine bakmıştır" },
+            { "tip": "gorev", "deger": "Haberleşme ve posta işlerini yürütmüştür" },
             { "tip": "gorevli", "deger": "Berid" }
           ]
         },
         {
           "ad": "Niyabet-i Saltanat",
           "ozellikler": [
-            { "tip": "gorev", "deger": "Sultan olmadığı zamanlarda toplanmıştır" },
+            { "tip": "gorev", "deger": "Sultanın başkentte bulunmadığı zamanlarda devlet işlerini yürütmüştür" },
             { "tip": "gorevli", "deger": "Naib" }
           ]
         },
@@ -308,12 +312,12 @@
           "ad": "Divan-ı Mezalim",
           "ozellikler": [
             { "tip": "gorev", "deger": "Kadı kararlarına yapılan itirazları değerlendirmiş ve sonuçlandırmıştır" },
-            { "tip": "gorev", "deger": "Devlet memurları hakkındaki şikayetleri incelemiştir" },
-            { "tip": "gorev", "deger": "Siyasi suçları görüşmüştür" },
-            { "tip": "gorev", "deger": "Katipleri aracılığı ile vakıfları denetlemiştir" },
-            { "tip": "gorev", "deger": "Muhtesibin yerine getiremediği kararları uygulamıştır" },
-            { "tip": "gorev", "deger": "Devlet memurlarının maaşlarının geç veya eksik ödenmesi hakkındaki şikayetleri incelemiştir" },
-            { "tip": "gorev", "deger": "Cuma ve bayram namazları ile hac ve cihad gibi ibadetlerin yerine getirilmesi için imkan sağlamıştır" },
+            { "tip": "gorev", "deger": "Devlet memurları hakkındaki şikâyetleri incelemiştir" },
+            { "tip": "gorev", "deger": "Siyasi nitelikteki suçları görüşüp karara bağlamıştır" },
+            { "tip": "gorev", "deger": "Kâtipleri aracılığıyla vakıfları denetlemiştir" },
+            { "tip": "gorev", "deger": "Muhtesibin uygulayamadığı kararları yerine getirmiştir" },
+            { "tip": "gorev", "deger": "Devlet memurlarının maaşlarının geç ya da eksik ödenmesine ilişkin şikâyetleri incelemiştir" },
+            { "tip": "gorev", "deger": "Cuma ve bayram namazları ile hac ve cihat gibi ibadetlerin yerine getirilmesi için gerekli imkânı sağlamıştır" },
             { "tip": "gorevli", "deger": "Sultan" }
           ]
         }
@@ -334,97 +338,97 @@
         {
           "ad": "Mülk Arazi",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Alınabilen, satılabilen, devredilebilen veya miras bırakılabilen özel mülkiyet topraklarıdır" }
+            { "tip": "tanim", "deger": "Alınıp satılabilen, devredilebilen ve miras bırakılabilen özel mülkiyet topraklarıdır" }
           ]
         },
         {
           "ad": "Öşri",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Müslümanlara ait mülk topraklardır" }
+            { "tip": "tanim", "deger": "Müslümanlara ait olan ve öşür vergisine tabi tutulan mülk topraklardır" }
           ]
         },
         {
           "ad": "Haraci",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Gayrimüslimlere ait mülk topraklardır" }
+            { "tip": "tanim", "deger": "Gayrimüslimlere ait olan ve haraç vergisine tabi tutulan mülk topraklardır" }
           ]
         },
         {
           "ad": "Paşmaklık",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri padişahın annesi ve kızlarına ayrılan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri padişahın annesine, eşlerine ve kızlarına ayrılan topraklardır" }
           ]
         },
         {
           "ad": "Mukataa",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri doğrudan hazineye ayrılan ve iltizam sistemi uygulanarak vergi toplanan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri doğrudan hazineye aktarılan ve vergisi iltizam usulüyle toplanan topraklardır" }
           ]
         },
         {
           "ad": "Malikane",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri devlete yararlılık gösterenlere ayrılan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri, devlete yararlılık göstermiş kişilere ömür boyu bırakılan topraklardır" }
           ]
         },
         {
           "ad": "Yurtluk",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri sınır boylarında oturanlara ayrılan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri sınır boylarını koruyan görevlilere ayrılan topraklardır" }
           ]
         },
         {
           "ad": "Ocaklık",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri kale muhafızlarına ve tersanecilere ayrılan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri kale muhafızlarının ve tersane giderlerinin karşılanmasına ayrılan topraklardır" }
           ]
         },
         {
           "ad": "Metruk",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Halkın ortaklaşa kullandığı (otlak, yaylak gibi) topraklardır" }
+            { "tip": "tanim", "deger": "Otlak ve yaylak gibi, halkın ortaklaşa yararlandığı topraklardır" }
           ]
         },
         {
           "ad": "Arpalık",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Saray adamlarına ve ilmiye sınıfından bazı yüksek rütbeli kişilere çalıştıkları süre içinde maaşlarına ek olarak verilen arazilerdir" }
+            { "tip": "tanim", "deger": "Saray görevlilerine ve ilmiye sınıfının üst düzey mensuplarına, maaşlarına ek olarak verilen topraklardır" }
           ]
         },
         {
           "ad": "Dirlik",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri devlet memurlarına ve komutanlara ayrılan, Has-Zeamet-Tımar olmak üzere üçe ayrılan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri, hizmetleri karşılığında devlet görevlilerine ve komutanlara bırakılan; has, zeamet ve tımar olmak üzere üçe ayrılan topraklardır" }
           ]
         },
         {
           "ad": "Has",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri 100.000 akçeden fazla olan, padişah ve divan üyelerine ayrılan dirlik türüdür" }
+            { "tip": "tanim", "deger": "Yıllık geliri 100.000 akçeden fazla olan ve padişah ile divan üyelerine ayrılan dirlik türüdür" }
           ]
         },
         {
           "ad": "Zeamet",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri 20.000 ile 100.000 akçe arasında olan, müderris, tabip ve muidlere ayrılan dirlik türüdür" }
+            { "tip": "tanim", "deger": "Yıllık geliri 20.000 ile 100.000 akçe arasında olan ve müderris, tabip gibi görevlilere ayrılan dirlik türüdür" }
           ]
         },
         {
           "ad": "Tımar",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geliri en alt düzeydeki memurlara ve askerlere ayrılan en küçük dirlik türüdür" }
+            { "tip": "tanim", "deger": "Yıllık geliri 20.000 akçeye kadar olan ve tımarlı sipahiler ile alt düzey görevlilere ayrılan en küçük dirlik türüdür" }
           ]
         },
         {
           "ad": "Vakıf",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Hayırsever mülk sahiplerinin sosyal amaçlı kurumlara vakfettiği, kamu yararı için ayrılan topraklardır" }
+            { "tip": "tanim", "deger": "Geliri, sağlık ve eğitim gibi hayır kurumlarının giderlerine ayrılan topraklardır" }
           ]
         },
         {
           "ad": "Çifthane",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Bir köylü ailenin bir çift öküz ile işleyebileceği kadar miri araziyi belirli şartlarda kiraya verme sistemidir" }
+            { "tip": "tanim", "deger": "Bir köylü ailenin bir çift öküzle işleyebileceği büyüklükteki mirî toprağın, belirli şartlarla o aileye kiralanması sistemidir" }
           ]
         }
       ]
@@ -447,13 +451,13 @@
         {
           "ad": "Yahşi Fakih",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Osmanlı hakkında ilk tarihi bilgileri veren \" Menakıbname\"nin yazarıdır" }
+            { "tip": "ozellik", "deger": "Osmanlı Devleti hakkında ilk tarihî bilgileri veren Menakıbname adlı eserin yazarıdır" }
           ]
         },
         {
           "ad": "Ahmedi",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin kuruluşu ile ilgili bilgi veren en eski kaynak olan \"İskendername\"nin yazarıdır" }
+            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin kuruluşuna dair bilgi veren en eski kaynaklardan İskendername adlı eserin yazarıdır" }
           ]
         },
         {
@@ -472,8 +476,8 @@
           "ad": "Akşemseddin",
           "ozellikler": [
             { "tip": "unvan", "deger": "Mikrobiyolojinin Babası" },
-            { "tip": "ozellik", "deger": "Mikrop teorisini bulan ilk kanser araştırmacısıdır" },
-            { "tip": "ozellik", "deger": "Fatih Sultan Mehmet'in hocalığını yapmıştır" },
+            { "tip": "ozellik", "deger": "Hastalıkların gözle görülmeyen canlılardan bulaştığını ileri süren ve kanser üzerine çalışan bilim insanıdır" },
+            { "tip": "ozellik", "deger": "Fatih Sultan Mehmet'in hocası olmuş ve İstanbul'un fethine manevi önderlik etmiştir" },
             { "tip": "eser", "deger": "Risaletü'n Nuriyye" },
             { "tip": "eser", "deger": "Maddetü'l Hayat" }
           ]
@@ -482,7 +486,7 @@
           "ad": "Sabuncuoğlu Şerafettin",
           "ozellikler": [
             { "tip": "unvan", "deger": "Türk Plastik Cerrahisinin Babası" },
-            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin ilk ve en ünlü cerrahıdır" },
+            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin ilk ve en ünlü cerrahı kabul edilmiştir" },
             { "tip": "eser", "deger": "Kitabül Cerrahiyetül Haniye" },
             { "tip": "eser", "deger": "Mücerrebname" }
           ]
@@ -490,37 +494,37 @@
         {
           "ad": "Ali Kuşçu",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Ay'ın haritasını çıkarmıştır (Ay'ın bir bölgesine adı verilmiştir)" },
-            { "tip": "ozellik", "deger": "İstanbul'un enlem ve boylamını hesaplamıştır" },
-            { "tip": "eser", "deger": "er-Risaletü'l Fethiyye", "aciklama": "Fatih Sultan Mehmet'e sunulmuştur." }
+            { "tip": "ozellik", "deger": "Ay'ın haritasını çıkarmış ve Ay'daki bir bölgeye adı verilmiştir" },
+            { "tip": "ozellik", "deger": "İstanbul'un enlem ve boylamını hesaplayarak güneş saatini düzenlemiştir" },
+            { "tip": "eser", "deger": "er-Risaletü'l Fethiyye", "aciklama": "Astronomi alanında yazılmış ve Fatih Sultan Mehmet'e sunulmuştur." }
           ]
         },
         {
           "ad": "Piri Reis",
           "ozellikler": [
             { "tip": "ozellik", "deger": "İlk dünya haritasını çizmiştir" },
-            { "tip": "eser", "deger": "Kitab-ı Bahriye", "aciklama": "Amerika'nın keşfinden ve bilinmeyen kıta ve bölgelerden bahsetmiştir." }
+            { "tip": "eser", "deger": "Kitab-ı Bahriye", "aciklama": "Akdeniz kıyılarını, limanları ve denizcilik bilgilerini anlatan bir deniz atlasıdır." }
           ]
         },
         {
           "ad": "Seydi Ali Reis",
           "ozellikler": [
-            { "tip": "eser", "deger": "Miratül Memalik", "aciklama": "Anlamı: Ülkelerin Aynası." },
-            { "tip": "eser", "deger": "Kitab-ül Muhit", "aciklama": "Anlamı: Yön Haritası." }
+            { "tip": "eser", "deger": "Miratül Memalik", "aciklama": "Adının anlamı 'Ülkelerin Aynası'dır." },
+            { "tip": "eser", "deger": "Kitab-ül Muhit", "aciklama": "Hint Okyanusu'nda denizcilik bilgilerini anlatan bir eserdir." }
           ]
         },
         {
           "ad": "Ebu Suud Efendi",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin en ünlü şeyhülislamıdır" }
+            { "tip": "ozellik", "deger": "Kanuni Sultan Süleyman döneminde görev yapan, Osmanlı'nın en ünlü şeyhülislamıdır" }
           ]
         },
         {
           "ad": "Takiyüddin Mehmet",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin ilk rasathanesini kurmuştur" },
-            { "tip": "ozellik", "deger": "Otomatik makineler üzerine ilk eseri yazan bilim insanıdır" },
-            { "tip": "ozellik", "deger": "Bulduğu mekanik saati (Zatü'l Evtar) astronomide kullanmıştır" }
+            { "tip": "ozellik", "deger": "İstanbul'da Osmanlı Devleti'nin ilk rasathanesini kurmuştur" },
+            { "tip": "ozellik", "deger": "Otomatik makineler üzerine eser yazan ilk bilim insanı kabul edilmiştir" },
+            { "tip": "ozellik", "deger": "Geliştirdiği mekanik saati (Zatü'l Evtar) astronomi gözlemlerinde kullanmıştır" }
           ]
         },
         {
@@ -534,33 +538,33 @@
           "ozellikler": [
             { "tip": "unvan", "deger": "Hacı Halife" },
             { "tip": "unvan", "deger": "Hacı Kalfa" },
-            { "tip": "eser", "deger": "Keşfü'z Zunun", "aciklama": "Anlamı: Merak edilen şey." },
-            { "tip": "eser", "deger": "Cihannüma", "aciklama": "Coğrafya alanında yazılmıştır." }
+            { "tip": "eser", "deger": "Keşfü'z Zunun", "aciklama": "Yaklaşık 15.000 kitap ve yazarı tanıtan bir bibliyografya eseridir." },
+            { "tip": "eser", "deger": "Cihannüma", "aciklama": "Coğrafya alanında yazılmış bir eserdir." }
           ]
         },
         {
           "ad": "Yanyalı Esat Efendi",
           "ozellikler": [
             { "tip": "unvan", "deger": "Muallim-i Salis (Üçüncü Öğretmen)" },
-            { "tip": "ozellik", "deger": "Aristo'nun Fizika adlı eserini Arapçaya çevirmiştir" }
+            { "tip": "ozellik", "deger": "Aristoteles'in Fizika adlı eserini Arapçaya çevirmiştir" }
           ]
         },
         {
           "ad": "Hezarfen Ahmet Çelebi",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "İnsanlık tarihinin ilk başarılı uçuşunu yapmıştır" }
+            { "tip": "ozellik", "deger": "Galata Kulesi'nden Üsküdar'a uçarak tarihin bilinen ilk başarılı planör uçuşunu gerçekleştirmiştir" }
           ]
         },
         {
           "ad": "Lagari Hasan Çelebi",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Dünya tarihinin roketle uçan ilk insanıdır" }
+            { "tip": "ozellik", "deger": "Kendi yaptığı barutlu roketle havalanarak roketle uçan ilk insan kabul edilmiştir" }
           ]
         },
         {
           "ad": "Naima",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "İlk resmi tarih yazarıdır (Vakanüvis)" }
+            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin ilk resmî tarih yazarıdır (vakanüvis)" }
           ]
         },
         {
@@ -582,61 +586,61 @@
         {
           "ad": "İaşecilik (Provizyonizm)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Halkın refahı için piyasalarda arz-talep dengesi gözetilerek yeteri kadar mal bulundurulması ekonomik anlayışıdır" }
+            { "tip": "tanim", "deger": "Piyasada mal darlığı yaşanmaması için üretilen malların öncelikle ülke içinde ve yeterli miktarda bulundurulmasını esas alan ekonomik anlayıştır" }
           ]
         },
         {
           "ad": "Gelenekçilik",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Üretimin ne kadar ve nasıl olacağı, malların topluma nasıl ulaştırılacağı gibi konuları ele alan ekonomik anlayıştır" }
+            { "tip": "tanim", "deger": "Var olan sosyal ve ekonomik düzeni olduğu gibi korumayı, köklü değişiklikler yapmaktan kaçınmayı esas alan ekonomik anlayıştır" }
           ]
         },
         {
           "ad": "Fiskalizm",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Devletin gelirlerinin en üst düzeye, giderlerinin ise en alt düzeye indirilmeye çalışıldığı ekonomik anlayıştır" }
+            { "tip": "tanim", "deger": "Hazine gelirlerini olabildiğince artırmayı, giderleri ise olabildiğince azaltmayı esas alan ekonomik anlayıştır" }
           ]
         },
         {
           "ad": "Merkantilizm",
           "ozellikler": [
-            { "tip": "tanim", "deger": "15. ve 16. yüzyılda Avrupa'da gümüş ve altının zenginlik aracı sayıldığı, Osmanlı ekonomisine zarar veren ekonomik anlayıştır" }
+            { "tip": "tanim", "deger": "15 ve 16. yüzyıllarda Avrupa'da benimsenen, ülkedeki altın ve gümüş miktarını zenginliğin ölçüsü sayan ve Osmanlı ekonomisini olumsuz etkileyen ekonomik anlayıştır" }
           ]
         },
         {
           "ad": "Narh Sistemi",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Eksik rekabet şartlarından dolayı devletin fiyatlara müdahale etmesidir" }
+            { "tip": "tanim", "deger": "Rekabetin yeterli olmadığı durumlarda devletin mal ve hizmet fiyatlarına üst sınır koyarak müdahale etmesidir" }
           ]
         },
         {
           "ad": "Lonca Teşkilatı",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Ahiliğin devamı olan, gayrimüslimlerin de girebildiği, cihada gidilmeyen esnaf teşkilatıdır", "aciklama": "Teşkilatta esnafı koruyanlara Yiğitbaşı, esnaf ile devlet/halk arasındaki ilişkileri düzenleyene Kethüda (Kahya), başındaki kişiye Şeyh veya Pir denir." }
+            { "tip": "tanim", "deger": "Ahiliğin devamı niteliğinde olan, gayrimüslimlerin de üye olabildiği esnaf teşkilatıdır", "aciklama": "Teşkilatta esnafı koruyanlara Yiğitbaşı, esnaf ile devlet/halk arasındaki ilişkileri düzenleyene Kethüda (Kahya), başındaki kişiye Şeyh veya Pir denir." }
           ]
         },
         {
           "ad": "Yiğitbaşı",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Lonca teşkilatı içinde esnafı koruyan kişidir" }
+            { "tip": "tanim", "deger": "Lonca teşkilatında esnafın haklarını koruyan görevlidir" }
           ]
         },
         {
           "ad": "Kethüda (Kahya)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Lonca teşkilatında esnaf ile devletin veya esnaf ile halkın arasındaki ilişkileri düzenleyen kişidir" }
+            { "tip": "tanim", "deger": "Lonca teşkilatında esnaf ile devlet ve esnaf ile halk arasındaki ilişkileri düzenleyen görevlidir" }
           ]
         },
         {
           "ad": "Şeyh (Pir)",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Lonca teşkilatının başındaki kişiye verilen addır" }
+            { "tip": "tanim", "deger": "Lonca teşkilatının başında bulunan kişiye verilen addır" }
           ]
         },
         {
           "ad": "Derbent Teşkilatı",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geçitlerin bakım-onarımını yapan ve vergisini toplayan teşkilattır" }
+            { "tip": "tanim", "deger": "Yol ve geçitlerin güvenliğini sağlayan, bakım ve onarımını üstlenen teşkilattır" }
           ]
         },
         {
@@ -648,31 +652,31 @@
         {
           "ad": "Menzil Teşkilatı",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Kervanlar arasında haberleşmeyi sağlayan teşkilattır" }
+            { "tip": "tanim", "deger": "Belirli duraklar (menziller) üzerinden ülke genelinde haberleşmeyi ve ulaşımı sağlayan teşkilattır" }
           ]
         },
         {
           "ad": "Mekkari Taifesi",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Mekkar (at, eşek ve devenin ortak ismi) taifesi olarak bilinen, günümüzün kargo ve nakliyat şirketleri gibi işleyen teşkilattır" }
+            { "tip": "tanim", "deger": "At, eşek ve deve ile yük taşımacılığı yapan, günümüzün kargo ve nakliyat şirketlerine benzeyen esnaf topluluğudur" }
           ]
         },
         {
           "ad": "Gedik Hakkı",
           "ozellikler": [
-            { "tip": "tanim", "deger": "İş yeri açma ruhsatıdır" }
+            { "tip": "tanim", "deger": "Bir esnafa iş yeri açma izni veren belgedir" }
           ]
         },
         {
           "ad": "Ehli Hibre",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Malın kalitesini kontrol eden görevlidir" }
+            { "tip": "tanim", "deger": "Üretilen malın kalitesini denetleyen bilirkişidir" }
           ]
         },
         {
           "ad": "Bezirgan",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Büyük tüccarlara verilen isimdir" }
+            { "tip": "tanim", "deger": "Büyük çaplı ticaret yapan tüccarlara verilen addır" }
           ]
         }
       ]
@@ -692,43 +696,43 @@
         {
           "ad": "Öşür",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Müslümanların ürünlerinden genellikle 1/10 oranında peşin olarak alınan şer'i vergidir" }
+            { "tip": "tanim", "deger": "Müslümanların topraktan elde ettiği ürünlerden genellikle 1/10 oranında alınan şer'i vergidir" }
           ]
         },
         {
           "ad": "Haraç",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Gayrimüslimlerin ürünlerinden genellikle 2/10 oranında alınan şer'i vergidir" }
+            { "tip": "tanim", "deger": "Gayrimüslimlerin topraktan elde ettiği ürünlerden genellikle 2/10 oranında alınan şer'i vergidir" }
           ]
         },
         {
           "ad": "Cizye",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Gayrimüslimlerin askerlik yapmadıkları için ödedikleri şer'i vergidir" }
+            { "tip": "tanim", "deger": "Askerlik yapmayan gayrimüslim erkeklerden alınan şer'i vergidir" }
           ]
         },
         {
           "ad": "Zekat",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Müslümanlardan deniz ürünleri, madenler, zirai ürünler ve ticari faaliyetlerden elde edilen gelirler üzerinden 40/1 oranında alınan şer'i vergidir" }
+            { "tip": "tanim", "deger": "Müslümanların deniz ürünleri, madenler, zirai ürünler ve ticaretten elde ettiği gelirler üzerinden 1/40 oranında alınan şer'i vergidir" }
           ]
         },
         {
           "ad": "Ağnam",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Küçükbaş hayvanlardan alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Koyun ve keçi gibi küçükbaş hayvanlardan alınan örfi vergidir" }
           ]
         },
         {
           "ad": "Avarız",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Olağanüstü hallerde alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Savaş ve doğal afet gibi olağanüstü durumlarda alınan örfi vergidir" }
           ]
         },
         {
           "ad": "Bac",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Pazar yeri vergisidir" }
+            { "tip": "tanim", "deger": "Pazarlarda alınıp satılan mallardan alınan örfi vergidir" }
           ]
         },
         {
@@ -740,43 +744,43 @@
         {
           "ad": "Çiftbozan",
           "ozellikler": [
-            { "tip": "tanim", "deger": "İki veya üç yıl boyunca tarlayı ekmeyenlerden alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Toprağını üst üste üç yıl boyunca ekmeyip boş bırakanlardan alınan örfi vergidir" }
           ]
         },
         {
           "ad": "İltizam",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Muaccele bedelinin alındığı örfi vergidir" }
+            { "tip": "tanim", "deger": "Devlete ait vergi gelirlerinin, peşin ödeme (muaccele) karşılığında açık artırmayla mültezimlere devredilmesi usulüdür" }
           ]
         },
         {
           "ad": "İspenç",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Gayrimüslimlerin ödediği toprak vergisidir" }
+            { "tip": "tanim", "deger": "Gayrimüslim köylülerin işledikleri toprak için ödedikleri örfi vergidir" }
           ]
         },
         {
           "ad": "İmdadiye Seferiye",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Sefer zamanı alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Savaş zamanında eyalet yöneticilerinin masraflarını karşılamak için halktan alınan örfi vergidir" }
           ]
         },
         {
           "ad": "İmdadiye Hazariye",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Barış zamanı alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Barış zamanında eyalet yöneticilerinin masraflarını karşılamak için halktan alınan örfi vergidir" }
           ]
         },
         {
           "ad": "Derbent",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Geçitlerden ve köprülerden alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Geçit ve köprülerin güvenliği karşılığında alınan örfi vergidir" }
           ]
         },
         {
           "ad": "İzni Sefine",
           "ozellikler": [
-            { "tip": "tanim", "deger": "Boğazlardan geçen gemiler için alınan örfi vergidir" }
+            { "tip": "tanim", "deger": "Boğazlardan geçen gemilerden alınan örfi vergidir" }
           ]
         }
       ]
@@ -788,6 +792,9 @@
       "unite": "İslamiyet Öncesi Türk Devletleri",
       "kategori": "kisiler",
       "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Bumin Kağan", "Kutluk Kağan"]
+      ],
       "varliklar": [
         {
           "ad": "Teoman",
@@ -880,31 +887,31 @@
           "ad": "Karluklar",
           "tur": "topluluk",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "İslamiyeti kabul eden ilk Türk topluluğudur" }
+            { "tip": "ozellik", "deger": "İslamiyet'i kabul eden ilk Türk topluluğudur" }
           ]
         },
         {
           "ad": "Simon",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Çar unvanını kullanan ilk Türk hükümdardır" }
+            { "tip": "ozellik", "deger": "Çar unvanını kullanan ilk Türk hükümdarıdır" }
           ]
         },
         {
           "ad": "Boris Han",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Tuna Bulgarlarının Hristiyanlığı kabul ettiği dönemin hükümdarıdır" }
+            { "tip": "ozellik", "deger": "Tuna Bulgarlarının Hristiyanlığı kabul ettiği dönemde tahtta bulunan hükümdardır" }
           ]
         },
         {
           "ad": "Almış Han",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "İtil Bulgarlarının İslamiyeti kabul ettiği dönemin hükümdarıdır" }
+            { "tip": "ozellik", "deger": "İtil Bulgarlarının İslamiyet'i kabul ettiği dönemde tahtta bulunan hükümdardır" }
           ]
         },
         {
           "ad": "Bögü Kağan",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Uygurların Mani dinine geçtiği dönemin hükümdarıdır" }
+            { "tip": "ozellik", "deger": "Uygurların Mani dinini benimsediği dönemde tahtta bulunan hükümdardır" }
           ]
         },
         {
@@ -917,7 +924,7 @@
           "ad": "İbni Fadlan",
           "tur": "kisi",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Rihle adlı eserinde İtil Bulgarlarından bahsetmiştir" }
+            { "tip": "ozellik", "deger": "Rihle adlı seyahatnamesinde İtil Bulgarları hakkında bilgi vermiştir" }
           ]
         }
       ]
@@ -1023,17 +1030,39 @@
           "ozellikler": [
             { "tip": "sinif", "deger": "törenin değişmez dört kuralı", "aciklama": "Törenin değişmez dört kuralı: könilik (adalet), uzluk (iyilik), insanlık (kişilik), tüzlük (eşitlik)." }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_hukumdarlik_sembolleri",
+      "cevapTuru": "sembol",
+      "ad": "İslamiyet Öncesi Türk Devletleri — Hükümdarlık (Egemenlik) Sembolleri",
+      "unite": "İslamiyet Öncesi Türk Devletleri",
+      "kategori": "terimler",
+      "tip": "terim",
+      "varliklar": [
         {
-          "ad": "Örgin (taht)",
+          "ad": "Örgin",
           "ozellikler": [
-            { "tip": "sinif", "deger": "hükümdarlık sembolleri", "aciklama": "Örgin (taht) ve nevbet (davul) hükümdarlık/egemenlik sembollerindendir." }
+            { "tip": "tanim", "deger": "Hükümdarın oturduğu tahta verilen addır" }
           ]
         },
         {
-          "ad": "Nevbet (davul)",
+          "ad": "Nevbet",
           "ozellikler": [
-            { "tip": "sinif", "deger": "hükümdarlık sembolleri", "aciklama": "Örgin (taht) ve nevbet (davul) hükümdarlık/egemenlik sembollerindendir." }
+            { "tip": "tanim", "deger": "Egemenlik göstergesi olarak belirli vakitlerde çalınan davuldur" }
+          ]
+        },
+        {
+          "ad": "Otağ",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "Hükümdarın kullandığı çadıra verilen addır" }
+          ]
+        },
+        {
+          "ad": "Tuğ",
+          "ozellikler": [
+            { "tip": "tanim", "deger": "At kuyruğundan yapılan, hükümdarlık göstergesi olarak kullanılan sancaktır" }
           ]
         }
       ]
@@ -1071,7 +1100,7 @@
         {
           "ad": "Satuk Buğra Han",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Karahanlıların İslamiyeti kabul ettiği dönemin hükümdarıdır" }
+            { "tip": "ozellik", "deger": "Karahanlıların İslamiyet'i kabul ettiği dönemde tahtta bulunan hükümdardır" }
           ]
         }
       ]
@@ -1099,7 +1128,7 @@
         {
           "ad": "Memlükler",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Veraset sistemi diğer Türk devletlerinden farklıdır; hanedan dışından başarılı komutanlar da başa geçebilmiştir" }
+            { "tip": "ozellik", "deger": "Veraset anlayışı diğer Türk devletlerinden farklıdır; hanedan üyesi olmayan başarılı komutanlar da tahta geçebilmiştir" }
           ]
         }
       ]
@@ -1225,7 +1254,7 @@
           ]
         },
         {
-          "ad": "Ölmeden önce ülke topraklarının 11 oğul arasında paylaştırılması",
+          "ad": "Ülke topraklarının, ölümünden önce on bir oğlu arasında paylaştırılması",
           "ozellikler": [
             { "tip": "hukumdar", "deger": "II. Kılıç Arslan" }
           ]
@@ -1233,7 +1262,7 @@
         {
           "ad": "Antalya'nın ilk kez fethedilmesi",
           "ozellikler": [
-            { "tip": "hukumdar", "deger": "I. Gıyaseddin Keyhüsrev", "aciklama": "İki defa tahta çıkan hükümdardır." }
+            { "tip": "hukumdar", "deger": "I. Gıyaseddin Keyhüsrev", "aciklama": "Anadolu Selçuklu tahtına iki kez çıkan hükümdardır." }
           ]
         },
         {
@@ -1275,7 +1304,7 @@
         {
           "ad": "Harzemşahlarla Yassıçimen Savaşı'nın yapılması",
           "ozellikler": [
-            { "tip": "hukumdar", "deger": "I. Alâeddin Keykubat", "aciklama": "Savaş kazanıldı; fakat Harzemşahların yıkılmasıyla Anadolu Selçuklu Devleti Moğollara komşu oldu." }
+            { "tip": "hukumdar", "deger": "I. Alâeddin Keykubat", "aciklama": "Savaş kazanılmış; ancak Harzemşahların yıkılmasıyla Anadolu Selçuklu Devleti Moğollara komşu olmuştur." }
           ]
         },
         {

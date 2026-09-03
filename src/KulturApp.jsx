@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import data from './data/kultur.json'
-import { generateQuestions } from './utils/questionGenerator.js'
+import { generateQuestions, countPossibleQuestions } from './utils/questionGenerator.js'
 
 const COUNT_OPTIONS = [15, 35, 75, 125, 'Tümü']
 
@@ -39,18 +39,7 @@ const KATEGORI_LIST = [
 ]
 
 function countCandidatesFor(gruplar, unite, kategori) {
-  let filt = gruplar
-  if (unite !== 'karma') filt = filt.filter(g => g.unite === unite)
-  if (kategori !== 'karma') filt = filt.filter(g => g.kategori === kategori)
-  // Aynı varlıktan yalnızca bir soru üretildiği için,
-  // olası soru sayısı = en az bir özelliği olan benzersiz varlık sayısı.
-  let cnt = 0
-  for (const g of filt) {
-    for (const v of g.varliklar) {
-      if (v.ozellikler && v.ozellikler.length > 0) cnt++
-    }
-  }
-  return cnt
+  return countPossibleQuestions(gruplar, unite, kategori)
 }
 
 export default function KulturApp({ onBack }) {
@@ -61,7 +50,7 @@ export default function KulturApp({ onBack }) {
 
   const questions = useMemo(() => {
     if (unite == null || kategori == null) return []
-    return generateQuestions(data.gruplar, unite, kategori, count)
+    return generateQuestions(data.gruplar, unite, kategori, count, data.birlikteGelenler)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [unite, kategori, count, sessionKey])
 

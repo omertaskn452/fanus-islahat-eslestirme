@@ -188,6 +188,18 @@ function formatOzellikAd(grup, ozellik) {
       if (ozellik.tip === 'hukumdar') return `${d} döneminde yaşanan gelişmelerden biri aşağıdakilerden hangisidir?`
       return `${cumle(d)}\n\nYukarıda verilen bilgi hangi hükümdara aittir?`
 
+    case 'osmanli_isyanlar':
+      // 'padisah' yalnızca tek isyanı olan padişahlarda buraya düşer; birden
+      // çok isyanı olan padişahlarda (ör. Kanuni) jeneratör bu yönü eler.
+      if (ozellik.tip === 'padisah') return `${d} Dönemi'nde çıkan isyan aşağıdakilerden hangisidir?`
+      return `${cumle(d)}\n\nYukarıda hakkında bilgi verilen isyan aşağıdakilerden hangisidir?`
+
+    case 'osmanli_antlasmalar':
+      return `${cumle(d)}\n\nYukarıda bir sonucu verilen antlaşma aşağıdakilerden hangisidir?`
+
+    case 'osmanli_gelismeler':
+      return `${cumle(d)}\n\nYukarıda bir sonucu verilen gelişme aşağıdakilerden hangisidir?`
+
     default:
       return `${cumle(d)}\n\nYukarıda verilen bilgi aşağıdakilerden hangisine aittir?`
   }
@@ -245,6 +257,14 @@ function formatAdOzellik(grup, varlik, ozellik) {
 
     case 'anadolu_selcuklu_olaylar':
       if (ozellik.tip === 'hukumdar') return `${cumle(ad)}\n\nYukarıda verilen gelişme, hangi Anadolu Selçuklu hükümdarı döneminde yaşanmıştır?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
+    case 'osmanli_isyanlar':
+      if (ozellik.tip === 'padisah') return `${ad}, hangi Osmanlı padişahı döneminde çıkmıştır?`
+      return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
+
+    case 'osmanli_antlasmalar':
+    case 'osmanli_gelismeler':
       return `${ad} ile ilgili aşağıdakilerden hangisi doğrudur?`
 
     default:

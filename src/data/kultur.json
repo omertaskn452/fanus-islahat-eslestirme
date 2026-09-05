@@ -441,6 +441,7 @@
       "kategori": "kisiler",
       "tip": "kisi",
       "birlikteSorulanlar": [
+        ["Dursun Fakih", "Davud-u Kayseri", "Molla Fenari"],
         ["Akşemseddin", "Sabuncuoğlu Şerafettin"],
         ["Piri Reis", "Seydi Ali Reis"],
         ["Evliya Çelebi", "Kâtip Çelebi"],
@@ -461,9 +462,15 @@
           ]
         },
         {
+          "ad": "Dursun Fakih",
+          "ozellikler": [
+            { "tip": "ozellik", "deger": "Osman Bey Dönemi'nde göreve getirilen, Osmanlı Devleti'nin ilk kadısıdır", "aciklama": "Osman Bey adına ilk Cuma hutbesini okuyan kişi olarak da bilinir." }
+          ]
+        },
+        {
           "ad": "Davud-u Kayseri",
           "ozellikler": [
-            { "tip": "ozellik", "deger": "Osmanlı Devleti'nin ilk müderrisidir" }
+            { "tip": "ozellik", "deger": "Orhan Bey Dönemi'nde göreve getirilen, Osmanlı Devleti'nin ilk müderrisidir", "aciklama": "İznik'te açılan ilk Osmanlı medresesinin başına getirilmiştir." }
           ]
         },
         {
@@ -1317,6 +1324,202 @@
           "ad": "1243 Kösedağ Savaşı'nın Moğollara (İlhanlılar) karşı kaybedilmesi",
           "ozellikler": [
             { "tip": "hukumdar", "deger": "II. Gıyaseddin Keyhüsrev" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osmanli_isyanlar",
+      "cevapTuru": "isyan",
+      "ad": "Osmanlı Devleti — İsyanlar",
+      "unite": "Osmanlı Devleti — Genel Bilgiler",
+      "kategori": "kisiler",
+      "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Şeyh Bedrettin İsyanı", "Buçuktepe İsyanı", "Bozoklu Celal İsyanı"]
+      ],
+      "varliklar": [
+        {
+          "ad": "Şeyh Bedrettin İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "Çelebi Mehmet" },
+            { "tip": "nitelik", "deger": "Osmanlı tarihinde çıkan ilk dinî nitelikli ayaklanmadır", "aciklama": "Fetret Devri'nin ardından Çelebi Mehmet Dönemi'nde çıkmış ve bastırılmıştır." }
+          ]
+        },
+        {
+          "ad": "Buçuktepe İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "II. Murat" },
+            { "tip": "nitelik", "deger": "Osmanlı tarihinde çıkan ilk Yeniçeri isyanıdır", "aciklama": "II. Murat Dönemi'nde çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Şahkulu İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "II. Bayezit" }
+          ]
+        },
+        {
+          "ad": "Bozoklu Celal İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "Yavuz Sultan Selim" },
+            { "tip": "nitelik", "deger": "Osmanlı tarihinde çıkan ilk Celali İsyanı'dır ve kendisinden sonraki benzer ayaklanmalara adını vermiştir", "aciklama": "Yavuz Sultan Selim Dönemi'nde Anadolu'da çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Canberdi Gazali İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "Kanuni Sultan Süleyman" }
+          ]
+        },
+        {
+          "ad": "Ahmet Paşa İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "Kanuni Sultan Süleyman" },
+            { "tip": "nitelik", "deger": "Mısır'da Memlük Devleti'ni yeniden canlandırmak amacıyla çıkarılmıştır", "aciklama": "Kanuni Sultan Süleyman Dönemi'nde Mısır'da çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Baba Zünnun İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "Kanuni Sultan Süleyman" }
+          ]
+        },
+        {
+          "ad": "Kalender Çelebi İsyanı",
+          "ozellikler": [
+            { "tip": "padisah", "deger": "Kanuni Sultan Süleyman" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osmanli_isyan_donemleri",
+      "ad": "Osmanlı Devleti — İsyanların Padişah Dönemleri",
+      "unite": "Osmanlı Devleti — Genel Bilgiler",
+      "kategori": "kisiler",
+      "tip": "siniflandirma",
+      "soruOnEki": "Osmanlı tarihinde,",
+      "varliklar": [
+        {
+          "ad": "Şeyh Bedrettin İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "Çelebi Mehmet Dönemi'nde çıkan isyanlar", "aciklama": "Çelebi Mehmet Dönemi'nde Şeyh Bedrettin İsyanı çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Buçuktepe İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "II. Murat Dönemi'nde çıkan isyanlar", "aciklama": "II. Murat Dönemi'nde Buçuktepe İsyanı çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Şahkulu İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "II. Bayezit Dönemi'nde çıkan isyanlar", "aciklama": "II. Bayezit Dönemi'nde Şahkulu İsyanı çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Bozoklu Celal İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "Yavuz Sultan Selim Dönemi'nde çıkan isyanlar", "aciklama": "Yavuz Sultan Selim Dönemi'nde Bozoklu Celal İsyanı (ilk Celali İsyanı) çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Canberdi Gazali İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "Kanuni Sultan Süleyman Dönemi'nde çıkan isyanlar", "aciklama": "Kanuni Sultan Süleyman Dönemi'nde Canberdi Gazali, Ahmet Paşa, Baba Zünnun ve Kalender Çelebi isyanları çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Ahmet Paşa İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "Kanuni Sultan Süleyman Dönemi'nde çıkan isyanlar", "aciklama": "Kanuni Sultan Süleyman Dönemi'nde Canberdi Gazali, Ahmet Paşa, Baba Zünnun ve Kalender Çelebi isyanları çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Baba Zünnun İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "Kanuni Sultan Süleyman Dönemi'nde çıkan isyanlar", "aciklama": "Kanuni Sultan Süleyman Dönemi'nde Canberdi Gazali, Ahmet Paşa, Baba Zünnun ve Kalender Çelebi isyanları çıkmıştır." }
+          ]
+        },
+        {
+          "ad": "Kalender Çelebi İsyanı",
+          "ozellikler": [
+            { "tip": "sinif", "deger": "Kanuni Sultan Süleyman Dönemi'nde çıkan isyanlar", "aciklama": "Kanuni Sultan Süleyman Dönemi'nde Canberdi Gazali, Ahmet Paşa, Baba Zünnun ve Kalender Çelebi isyanları çıkmıştır." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osmanli_antlasmalar",
+      "cevapTuru": "gelisme",
+      "ad": "Osmanlı Devleti — Antlaşmalar",
+      "unite": "Osmanlı Devleti — Genel Bilgiler",
+      "kategori": "terimler",
+      "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Karlofça Antlaşması (1699)", "İstanbul Antlaşması (1700)"],
+        ["Küçük Kaynarca Antlaşması (1774)", "Yaş Antlaşması (1792)"]
+      ],
+      "varliklar": [
+        {
+          "ad": "Karlofça Antlaşması (1699)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Osmanlı Devleti, Batı'da ilk kez geniş çaplı toprak kaybına uğramıştır" },
+            { "tip": "sonuc", "deger": "Osmanlı Devleti, bir antlaşma hazırlanırken ilk kez arabuluculuk kabul etmiştir", "aciklama": "Görüşmelerde İngiltere ve Hollanda arabuluculuk yapmıştır." }
+          ]
+        },
+        {
+          "ad": "İstanbul Antlaşması (1700)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Azak Kalesi Rusya'ya bırakılmış, böylece Ruslar ilk kez Karadeniz'e inme fırsatı elde etmiştir" },
+            { "tip": "sonuc", "deger": "Karlofça Antlaşması'nın devamı niteliğinde Rusya ile imzalanmıştır" }
+          ]
+        },
+        {
+          "ad": "Küçük Kaynarca Antlaşması (1774)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Osmanlı Devleti, tarihinde ilk kez savaş tazminatı ödemeyi kabul etmiştir", "aciklama": "Savaş tazminatı Rusya'ya ödenmiştir." },
+            { "tip": "sonuc", "deger": "Kırım, bu antlaşmayla bağımsızlığını kazanmıştır" }
+          ]
+        },
+        {
+          "ad": "Yaş Antlaşması (1792)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Kırım'ın Rusya'ya ait olduğu, Osmanlı Devleti tarafından kesin olarak kabul edilmiştir", "aciklama": "Kırım, Küçük Kaynarca Antlaşması ile bağımsız olmuş; Yaş Antlaşması ile Rusya'ya bırakılmıştır." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "osmanli_gelismeler",
+      "cevapTuru": "gelisme",
+      "ad": "Osmanlı Devleti — Önemli Gelişmeler",
+      "unite": "Osmanlı Devleti — Genel Bilgiler",
+      "kategori": "terimler",
+      "tip": "terim",
+      "birlikteSorulanlar": [
+        ["Sened-i İttifak (1808)", "Tanzimat Fermanı (1839)"]
+      ],
+      "varliklar": [
+        {
+          "ad": "Sened-i İttifak (1808)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Osmanlı padişahının mutlak otoritesi ilk kez sınırlandırılmıştır", "aciklama": "II. Mahmut ile ayanlar arasında imzalanmıştır." },
+            { "tip": "sonuc", "deger": "Osmanlı tarihindeki ilk demokratikleşme hareketi kabul edilmiştir" }
+          ]
+        },
+        {
+          "ad": "Tanzimat Fermanı (1839)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Anayasal düzene geçişin ilk adımı kabul edilmiştir" }
+          ]
+        },
+        {
+          "ad": "Kırım Savaşı (1853-1856)",
+          "ozellikler": [
+            { "tip": "sonuc", "deger": "Osmanlı Devleti, tarihindeki ilk dış borcunu bu gelişme sırasında İngiltere'den almıştır", "aciklama": "Osmanlı Devleti ilk dış borcunu 1854 yılında İngiltere'den almıştır." }
           ]
         }
       ]

@@ -27,14 +27,23 @@ const UNITE_LIST = [
   {
     id: 'Osmanlı Kültür ve Medeniyeti',
     ad: 'Osmanlı Kültür ve Medeniyeti',
-    kisa: 'Osmanlı',
+    kisa: 'Osmanlı Kültür',
     aciklama: 'Bilim insanları, toprak yönetimi, ekonomi, vergiler',
+  },
+  {
+    id: 'Osmanlı Devleti — Genel Bilgiler',
+    ad: 'Osmanlı Devleti — Genel Bilgiler',
+    kisa: 'Osmanlı Genel',
+    aciklama: 'İsyanlar ve padişah dönemleri, antlaşmalar, önemli gelişmeler',
+    // Kişi/terim ayrımı bu ünitede anlamlı değil: deste ekranı atlanır,
+    // ünite seçilir seçilmez tüm sorular karışık gelir.
+    tekDeste: true,
   },
 ]
 
 const KATEGORI_LIST = [
-  { id: 'kisiler',  ad: 'Kişiler',  aciklama: 'Bilim insanları, yazarlar' },
-  { id: 'terimler', ad: 'Terimler', aciklama: 'Görevliler, divanlar, kavramlar, vergiler, topraklar' },
+  { id: 'kisiler',  ad: 'Kişiler',  aciklama: 'Bilim insanları, yazarlar, hükümdar dönemleri' },
+  { id: 'terimler', ad: 'Terimler', aciklama: 'Görevliler, divanlar, kavramlar, vergiler, antlaşmalar' },
   { id: 'karma',    ad: 'Tümü',     aciklama: 'Kişi ve terimler karışık' },
 ]
 
@@ -60,6 +69,15 @@ export default function KulturApp({ onBack }) {
 
   function restart() {
     setSessionKey(k => k + 1)
+    setIdx(0)
+    setPicked(null)
+    setAnswers({})
+  }
+
+  function selectUnite(u) {
+    setUnite(u.id)
+    // Tek desteli ünitelerde deste ekranı gösterilmez.
+    setKategori(u.tekDeste ? 'karma' : null)
     setIdx(0)
     setPicked(null)
     setAnswers({})
@@ -101,6 +119,7 @@ export default function KulturApp({ onBack }) {
     ? { ad: 'Karma (Tüm Üniteler)', kisa: 'Karma' }
     : UNITE_LIST.find(u => u.id === unite) || null
   const kategoriInfo = KATEGORI_LIST.find(k => k.id === kategori) || null
+  const tekDeste = !!(uniteInfo && uniteInfo.tekDeste)
 
   // -------- EKRAN 1: ÜNİTE SEÇİMİ --------
   if (unite == null) {
@@ -116,7 +135,7 @@ export default function KulturApp({ onBack }) {
             {UNITE_LIST.map(u => {
               const cnt = countCandidatesFor(data.gruplar, u.id, 'karma')
               return (
-                <button key={u.id} className="choice" onClick={() => setUnite(u.id)}>
+                <button key={u.id} className="choice" onClick={() => selectUnite(u)}>
                   <span className="choice-title">{u.ad}</span>
                   <span className="choice-meta">{cnt} olası soru</span>
                   <span className="choice-desc">{u.aciklama}</span>
@@ -181,7 +200,9 @@ export default function KulturApp({ onBack }) {
     )
   }
 
-  const contextLabel = `${uniteInfo.kisa} · ${kategoriInfo.ad}`
+  const contextLabel = tekDeste
+    ? uniteInfo.kisa
+    : `${uniteInfo.kisa} · ${kategoriInfo.ad}`
 
   // -------- BİTİŞ EKRANI --------
   if (idx >= questions.length && questions.length > 0) {
@@ -215,7 +236,9 @@ export default function KulturApp({ onBack }) {
 
           <div className="test-finish-actions">
             <button className="btn primary" onClick={restart}>Yeni Tur</button>
-            <button className="btn" onClick={backToKategoriSecim}>Deste değiştir</button>
+            {!tekDeste && (
+              <button className="btn" onClick={backToKategoriSecim}>Deste değiştir</button>
+            )}
             <button className="btn" onClick={backToUniteSecim}>Ünite değiştir</button>
           </div>
 
@@ -285,7 +308,9 @@ export default function KulturApp({ onBack }) {
             ))}
           </div>
           <button className="btn ghost" onClick={restart}>Baştan başla</button>
-          <button className="btn ghost" onClick={backToKategoriSecim}>Deste değiştir</button>
+          {!tekDeste && (
+            <button className="btn ghost" onClick={backToKategoriSecim}>Deste değiştir</button>
+          )}
           <button className="btn ghost" onClick={backToUniteSecim}>Ünite değiştir</button>
           {onBack && <button className="btn ghost" onClick={onBack}>Ana menü</button>}
         </div>
